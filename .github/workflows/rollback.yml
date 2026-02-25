@@ -1,0 +1,43 @@
+name: Rollback to Previous Version
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to rollback'
+        required: true
+        type: choice
+        options:
+          - Test
+          - Dev
+      backup_artifact:
+        description: 'Backup artifact name (from previous deployment)'
+        required: true
+      solution_name:
+        description: 'Solution name to deploy'
+        required: true
+        default: 'PharmaTrack360'
+
+jobs:
+  rollback:
+    runs-on: windows-latest
+    environment: Test
+
+    steps:
+    - name: Download backup
+      uses: actions/download-artifact@v3
+      with:
+        name: ${{ github.event.inputs.backup_artifact }}
+        path: ${{ github.event.inputs.backup_artifact }}
+
+    - name: Import backup solution
+      uses: microsoft/powerplatform-actions/import-solution@v1
+      with:
+        environment-url: ${{ secrets[format('{0}_ENVIRONMENT_URL', github.event.inputs.environment)] }}
+        solution-file: ${{ github.event.inputs.backup_artifact }}.zip
+        app-id: ${{ secrets.TEST_CLIENT_ID }}
+        client-secret: ${{ secrets.TEST_CLIENT_SECRET }}
+        tenant-id: ${{ secrets.TENANT_ID }}
+        force-overwrite: true
+        publish-changes: true
+        skip-dependency-check: false

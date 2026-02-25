@@ -1,0 +1,72 @@
+name: Export Solution from DEV
+
+on:
+    workflow_dispatch:
+        inputs:
+            solution_name:
+                description: 'solution name to export'
+                required: true
+                default: 'PharmaTrack360'
+            solution_exported_folder:
+                description: 'folder name for exported solution'
+                required: true
+                default: 'solutions/PharmaTrack360'
+
+jobs:
+    export-solution:
+        runs-on: windows-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              with:
+                token: ${{ secrets.PAT_TOKEN }}
+
+            - name: Setup Power Platform CLI
+              uses: microsoft/power-platform-actions/actions-install@v1
+
+            - name: Authenticate to DEV environment
+              uses: microsoft/power-platform-actions/who-am-i@v1
+              with:
+                environment: ${{ secrets.DEV_ENVIRONMENT_URL }}
+                tenant-id: ${{ secrets.TENANT_ID }}
+                app-id: ${{ secrets.DEV_CLIENT_ID }}
+                client-secret: ${{ secrets.DEV_CLIENT_SECRET }}
+
+            - name: Export unmanaged solution
+              uses: microsoft/powerplatform-actions/export-solution@v1
+              with:
+                environment-url: ${{ secrets.DEV_ENVIRONMENT_URL }}
+                app-id: ${{ secrets.DEV_CLIENT_ID }}
+                client-secret: ${{ secrets.DEV_CLIENT_SECRET }}
+                tenant-id: ${{ secrets.TENANT_ID }}
+                solution-name: ${{ github.event.inputs.solution_name }}
+                solution-output-file: ${{ github.event.inputs.solution_exported_folder }}/${{ github.event.inputs.solution_name }}_unmanaged.zip
+                managed: false
+
+            - name: Export managed solution
+              uses: microsoft/powerplatform-actions/export-solution@v1
+              with:
+                environment-url: ${{ secrets.DEV_ENVIRONMENT_URL }}
+                app-id: ${{ secrets.DEV_CLIENT_ID }}
+                client-secret: ${{ secrets.DEV_CLIENT_SECRET }}
+                tenant-id: ${{ secrets.TENANT_ID }}
+                solution-name: ${{ github.event.inputs.solution_name }}
+                solution-output-file: ${{ github.event.inputs.solution_exported_folder }}/${{ github.event.inputs.solution_name }}_managed.zip
+                managed: true
+
+            - name: Unpack solution
+              uses: microsoft/powerplatform-actions/unpack-solution@v1
+              with:
+                solution-file: ${{ github.event.inputs.solution_exported_folder }}/${{ github.event.inputs.solution_name }}_unmanaged.zip
+                solution-folder: ${{ github.event.inputs.solution_exported_folder }}/src
+                solution-type: Unmanaged
+                overwrite-files: true
+
+            - name: Commit and push changes
+              run: |
+                git config user.name "GitHub Actions Bot"
+                git config user.email "actions@github.com"
+                git add ${{ github.event.inputs.solution_exported_folder }}
+                git commit -m "Exported solution: ${{ github.event.inputs.solution_name }} - $(date +'%Y-%m-%d %H:%M:%S')"
+                git push

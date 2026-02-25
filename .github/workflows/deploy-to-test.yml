@@ -1,0 +1,67 @@
+name: Deploy to TEST Environment
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'solutions/**'
+  workflow_dispatch:
+    inputs:
+      solution_name:
+        description: 'Solution name to deploy'
+        required: true
+        default: 'PharmaTrack360'
+
+jobs:
+  deploy-to-test:
+    runs-on: windows-latest
+    environment: Test
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Power Platform CLI
+      uses: microsoft/powerplatform-actions/actions-install@v1
+
+    - name: Pack solution
+      uses: microsoft/powerplatform-actions/pack-solution@v1
+      with:
+        solution-file: solutions/${{ github.event.inputs.solution_name }}/${{ github.event.inputs.solution_name }}_managed.zip
+        solution-folder: solutions/${{ github.event.inputs.solution_name }}/src
+        solution-type: Managed
+
+    - name: Import solution to TEST
+      uses: microsoft/powerplatform-actions/import-solution@v1
+      with:
+        environment-url: ${{ secrets.TEST_ENVIRONMENT_URL }}
+        app-id: ${{ secrets.TEST_CLIENT_ID }}
+        client-secret: ${{ secrets.TEST_CLIENT_SECRET }}
+        tenant-id: ${{ secrets.TENANT_ID }}
+        solution-file: solutions/${{ github.event.inputs.solution_name }}/${{ github.event.inputs.solution_name }}_managed.zip
+        force-overwrite: true
+        publish-changes: true
+        skip-dependency-check: false
+
+    - name: Run Solution Checker
+      uses: microsoft/powerplatform-actions/check-solution@v1
+      with:
+        environment-url: ${{ secrets.TEST_ENVIRONMENT_URL }}
+        app-id: ${{ secrets.TEST_CLIENT_ID }}
+        client-secret: ${{ secrets.TEST_CLIENT_SECRET }}
+        tenant-id: ${{ secrets.TENANT_ID }}
+        path: solutions/${{ github.event.inputs.solution_name }}/${{ github.event.inputs.solution_name }}_managed.zip
+        checker-logs-artifact-name: solution-checker-logs
+
+    - name: Upload Solution Checker Results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: solution-checker-results
+        path: solution-checker-logs/
+
+    - name: Send notification
+      if: success()
+      run: |
+        echo "✅ Solution deployed successfully to TEST environment"
