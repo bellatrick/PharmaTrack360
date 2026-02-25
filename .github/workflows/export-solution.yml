@@ -28,7 +28,7 @@ jobs:
             - name: Authenticate to DEV environment
               uses: microsoft/powerplatform-actions/who-am-i@v1
               with:
-                environment_url: ${{ secrets.DEV_ENVIRONMENT_URL }}
+                environment-url: ${{ secrets.DEV_ENVIRONMENT_URL }}
                 tenant-id: ${{ secrets.TENANT_ID }}
                 app-id: ${{ secrets.DEV_CLIENT_ID }}
                 client-secret: ${{ secrets.DEV_CLIENT_SECRET }}
