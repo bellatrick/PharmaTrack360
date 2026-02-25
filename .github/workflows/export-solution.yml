@@ -23,10 +23,10 @@ jobs:
                 token: ${{ secrets.PAT_TOKEN }}
 
             - name: Setup Power Platform CLI
-              uses: microsoft/power-platform-actions/actions-install@v1
+              uses: microsoft/powerplatform-actions/actions-install@v1
 
             - name: Authenticate to DEV environment
-              uses: microsoft/power-platform-actions/who-am-i@v1
+              uses: microsoft/powerplatform-actions/who-am-i@v1
               with:
                 environment: ${{ secrets.DEV_ENVIRONMENT_URL }}
                 tenant-id: ${{ secrets.TENANT_ID }}
