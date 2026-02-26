@@ -23,9 +23,36 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.PAT_TOKEN }}
 
     - name: Setup Power Platform CLI
       uses: microsoft/powerplatform-actions/actions-install@v1
+
+    - name: Bump solution version
+      shell: pwsh
+      run: |
+        $xmlPath = "solutions/${{ env.SOLUTION_NAME }}/src/Other/Solution.xml"
+        [xml]$xml = Get-Content $xmlPath -Encoding UTF8
+        $current = $xml.ImportExportXml.SolutionManifest.Version
+        $newVersion = "1.0.${{ github.run_number }}.0"
+        $xml.ImportExportXml.SolutionManifest.Version = $newVersion
+        $xml.Save((Resolve-Path $xmlPath))
+        Write-Host "Version bumped: $current → $newVersion"
+
+    - name: Commit version bump
+      shell: pwsh
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "actions@github.com"
+        git add solutions/${{ env.SOLUTION_NAME }}/src/Other/Solution.xml
+        $status = git status --porcelain
+        if ($status) {
+          git commit -m "chore: bump solution version to 1.0.${{ github.run_number }}.0 [skip ci]"
+          git push
+        } else {
+          Write-Host "No version change to commit."
+        }
 
     - name: Import solution to TEST
       uses: microsoft/powerplatform-actions/import-solution@v1
@@ -59,4 +86,9 @@ jobs:
     - name: Send notification
       if: success()
       run: |
-        echo "✅ Solution deployed successfully to TEST environment"
+        echo "✅ Solution ${{ env.SOLUTION_NAME }} v1.0.${{ github.run_number }}.0 deployed successfully to TEST environment"
+
+    - name: Notify on failure
+      if: failure()
+      run: |
+        echo "❌ Deployment of ${{ env.SOLUTION_NAME }} to TEST failed on run #${{ github.run_number }}"

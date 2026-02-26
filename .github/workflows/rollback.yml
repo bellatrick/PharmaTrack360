@@ -10,34 +10,70 @@ on:
         options:
           - Test
           - Dev
-      backup_artifact:
-        description: 'Backup artifact name (from previous deployment)'
-        required: true
       solution_name:
-        description: 'Solution name to deploy'
+        description: 'Solution name to rollback'
         required: true
-        default: 'PharmaTrack360'
+        default: 'PharmaTrack360_Core'
+      backup_artifact:
+        description: 'Backup artifact name (from a previous deployment run)'
+        required: true
 
 jobs:
   rollback:
     runs-on: windows-latest
-    environment: Test
+    environment: ${{ github.event.inputs.environment }}
+    env:
+      ENV_UPPER: ${{ github.event.inputs.environment == 'Test' && 'TEST' || 'DEV' }}
 
     steps:
-    - name: Download backup
-      uses: actions/download-artifact@v3
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Power Platform CLI
+      uses: microsoft/powerplatform-actions/actions-install@v1
+
+    - name: Download backup artifact
+      uses: actions/download-artifact@v4
       with:
         name: ${{ github.event.inputs.backup_artifact }}
-        path: ${{ github.event.inputs.backup_artifact }}
+        path: rollback-artifact
 
-    - name: Import backup solution
+    - name: List downloaded artifact contents
+      shell: pwsh
+      run: |
+        Write-Host "Contents of rollback-artifact:"
+        Get-ChildItem -Recurse rollback-artifact | Select-Object FullName
+
+    - name: Locate solution zip
+      id: find_zip
+      shell: pwsh
+      run: |
+        $zip = Get-ChildItem -Path rollback-artifact -Filter "*.zip" -Recurse | Select-Object -First 1
+        if (-not $zip) {
+          Write-Error "No .zip file found in the downloaded artifact. Ensure the artifact contains a solution zip."
+          exit 1
+        }
+        Write-Host "Found zip: $($zip.FullName)"
+        echo "zip_path=$($zip.FullName)" >> $env:GITHUB_OUTPUT
+
+    - name: Import backup solution to ${{ github.event.inputs.environment }}
       uses: microsoft/powerplatform-actions/import-solution@v1
       with:
-        environment-url: ${{ secrets[format('{0}_ENVIRONMENT_URL', github.event.inputs.environment)] }}
-        solution-file: ${{ github.event.inputs.backup_artifact }}.zip
-        app-id: ${{ secrets.TEST_CLIENT_ID }}
-        client-secret: ${{ secrets.TEST_CLIENT_SECRET }}
+        environment-url: ${{ github.event.inputs.environment == 'Test' && secrets.TEST_ENVIRONMENT_URL || secrets.DEV_ENVIRONMENT_URL }}
+        app-id: ${{ github.event.inputs.environment == 'Test' && secrets.TEST_CLIENT_ID || secrets.DEV_CLIENT_ID }}
+        client-secret: ${{ github.event.inputs.environment == 'Test' && secrets.TEST_CLIENT_SECRET || secrets.DEV_CLIENT_SECRET }}
         tenant-id: ${{ secrets.TENANT_ID }}
+        solution-file: ${{ steps.find_zip.outputs.zip_path }}
         force-overwrite: true
         publish-changes: true
         skip-dependency-check: false
+
+    - name: Notify on success
+      if: success()
+      run: |
+        echo "✅ Rollback of ${{ github.event.inputs.solution_name }} to artifact '${{ github.event.inputs.backup_artifact }}' succeeded in ${{ github.event.inputs.environment }}"
+
+    - name: Notify on failure
+      if: failure()
+      run: |
+        echo "❌ Rollback failed for ${{ github.event.inputs.solution_name }} in ${{ github.event.inputs.environment }} — check the logs above"
