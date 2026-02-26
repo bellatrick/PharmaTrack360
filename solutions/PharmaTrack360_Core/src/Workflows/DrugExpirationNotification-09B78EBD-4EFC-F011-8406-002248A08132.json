@@ -1,12 +1,12 @@
 {
   "properties": {
     "connectionReferences": {
-      "shared_commondataserviceforapps": {
+      "shared_commondataserviceforapps-1": {
         "api": {
           "name": "shared_commondataserviceforapps"
         },
         "connection": {
-          "connectionReferenceLogicalName": "cr981_expenseTracker.shared_commondataserviceforapps.16ec2424f3e941859b7c1c78d1174c06"
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_35cba"
         },
         "runtimeSource": "embedded"
       },
@@ -62,7 +62,7 @@
             "host": {
               "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
               "operationId": "ListRecords",
-              "connectionName": "shared_commondataserviceforapps"
+              "connectionName": "shared_commondataserviceforapps-1"
             }
           },
           "runAfter": {},

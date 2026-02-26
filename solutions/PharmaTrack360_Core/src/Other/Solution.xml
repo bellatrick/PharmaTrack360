@@ -6,7 +6,7 @@
       <LocalizedName description="PharmaTrack360_Core" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
-    <Version>1.0.0.0</Version>
+    <Version>1.0.0.1</Version>
     <Managed>0</Managed>
     <Publisher>
       <UniqueName>PharmaTrack</UniqueName>
@@ -79,10 +79,22 @@
     </Publisher>
     <RootComponents>
       <RootComponent type="1" schemaName="account" behavior="2" />
+      <RootComponent type="1" schemaName="actioncard" behavior="2" />
+      <RootComponent type="1" schemaName="adx_externalidentity" behavior="2" />
+      <RootComponent type="1" schemaName="adx_invitation" behavior="2" />
+      <RootComponent type="1" schemaName="adx_inviteredemption" behavior="2" />
+      <RootComponent type="1" schemaName="adx_portalcomment" behavior="2" />
+      <RootComponent type="1" schemaName="adx_webformsession" behavior="2" />
+      <RootComponent type="1" schemaName="annotation" behavior="2" />
       <RootComponent type="1" schemaName="appointment" behavior="2" />
+      <RootComponent type="1" schemaName="chat" behavior="2" />
+      <RootComponent type="1" schemaName="connection" behavior="2" />
       <RootComponent type="1" schemaName="contact" behavior="2" />
       <RootComponent type="1" schemaName="customeraddress" behavior="2" />
       <RootComponent type="1" schemaName="email" behavior="2" />
+      <RootComponent type="1" schemaName="fax" behavior="2" />
+      <RootComponent type="1" schemaName="feedback" behavior="2" />
+      <RootComponent type="1" schemaName="letter" behavior="2" />
       <RootComponent type="1" schemaName="pharma_calllog" behavior="0" />
       <RootComponent type="1" schemaName="pharma_commissionrule" behavior="0" />
       <RootComponent type="1" schemaName="pharma_compliancelog" behavior="0" />
@@ -102,7 +114,11 @@
       <RootComponent type="1" schemaName="pharma_supplier" behavior="0" />
       <RootComponent type="1" schemaName="pharma_territory" behavior="0" />
       <RootComponent type="1" schemaName="phonecall" behavior="2" />
+      <RootComponent type="1" schemaName="powerpagessiteaifeedback" behavior="2" />
+      <RootComponent type="1" schemaName="recurringappointmentmaster" behavior="2" />
+      <RootComponent type="1" schemaName="syncerror" behavior="2" />
       <RootComponent type="1" schemaName="systemuser" behavior="1" />
+      <RootComponent type="1" schemaName="task" behavior="2" />
       <RootComponent type="29" id="{02f75470-310f-f111-8406-7ced8d7608a8}" behavior="0" />
       <RootComponent type="29" id="{09b78ebd-4efc-f011-8406-002248a08132}" behavior="0" />
       <RootComponent type="29" id="{25eb97d3-3e07-f111-8406-002248a2149c}" behavior="0" />
@@ -110,15 +126,12 @@
       <RootComponent type="29" id="{4ce109c9-970d-f111-8406-7ced8d7608a8}" behavior="0" />
       <RootComponent type="29" id="{6cb3232e-320f-f111-8406-7ced8d7608a8}" behavior="0" />
       <RootComponent type="29" id="{9d2af397-5dff-f011-8406-7c1e5220c199}" behavior="0" />
-      <RootComponent type="29" id="{a59eddcc-e2fc-f011-8406-0022489fdd64}" behavior="0" />
       <RootComponent type="29" id="{a95dcc5a-5800-f111-8406-000d3ab8539d}" behavior="0" />
-      <RootComponent type="29" id="{d9bc3458-e5fc-f011-8406-0022489fdd64}" behavior="0" />
       <RootComponent type="300" schemaName="pharma_pharmatrackdefaultcommandlibrary_d022d" behavior="0" />
       <RootComponent type="401" id="{970046e6-0549-4788-856d-f113d360e114}" behavior="0" />
       <RootComponent type="61" schemaName="pharma_retire_batch" behavior="0" />
       <RootComponent type="61" schemaName="pharma_togglePOLineSubgrid" behavior="0" />
       <RootComponent type="62" schemaName="pharma_PharmaTrack" behavior="0" />
-      <RootComponent type="70" id="{95fb01a9-83e8-f011-8407-6045bddcfef9}" behavior="0" />
       <RootComponent type="80" schemaName="pharma_PharmaTrack" behavior="0" />
       <RootComponent type="9" schemaName="pharma_accountstatus" behavior="0" />
       <RootComponent type="9" schemaName="pharma_accounttype" behavior="0" />
@@ -136,8 +149,68 @@
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>
+        <Required type="1" schemaName="actioncard" displayName="ActionCard" parentSchemaName="" solution="System (5.0)" />
+        <Dependent type="1" schemaName="actioncard" displayName="ActionCard" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="adx_externalidentity" displayName="External Identity" solution="PowerPages_RuntimeCore (1.0.2509.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="1" schemaName="adx_externalidentity" displayName="External Identity" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="adx_invitation" displayName="Invitation" solution="PowerPages_RuntimeCore (1.0.2509.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="1" schemaName="adx_invitation" displayName="Invitation" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="adx_inviteredemption" displayName="Invite Redemption" solution="PowerPages_RuntimeCore (1.0.2509.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="1" schemaName="adx_inviteredemption" displayName="Invite Redemption" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="adx_inviteredemption" displayName="Invite Redemption" solution="PowerPages_RuntimeCore (1.0.2509.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="2" schemaName="regardingobjectid" displayName="Regarding" parentSchemaName="adx_inviteredemption" parentDisplayName="Invite Redemption" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="adx_portalcomment" displayName="Portal Comment" solution="PowerPages_RuntimeCore (1.0.2509.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="1" schemaName="adx_portalcomment" displayName="Portal Comment" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="adx_portalcomment" displayName="Portal Comment" solution="PowerPages_RuntimeCore (1.0.2509.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="2" schemaName="regardingobjectid" displayName="Regarding" parentSchemaName="adx_portalcomment" parentDisplayName="Portal Comment" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="adx_webformsession" displayName="Multistep Form Session" solution="PowerPages_RuntimeCore (1.0.2509.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="1" schemaName="adx_webformsession" displayName="Multistep Form Session" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="annotation" displayName="Annotation" parentSchemaName="" solution="msdynce_ActivitiesPatch (9.0.26014.260122001)" />
+        <Dependent type="1" schemaName="annotation" displayName="Annotation" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="1" schemaName="appointment" displayName="Appointment" parentSchemaName="" solution="msdynce_ActivitiesPatch (9.0.26014.260122001)" />
         <Dependent type="1" schemaName="appointment" displayName="Appointment" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="chat" displayName="Teams chat" solution="msdynce_ActivitiesPatch (9.0.26014.260122001)">
+          <package appName="msdynce_Activities" version="9.0.26014.260122001">msdynce_EnableUCIByDefault (9.0.26014.260122001)</package>
+        </Required>
+        <Dependent type="1" schemaName="chat" displayName="Teams chat" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="connection" displayName="Connection" parentSchemaName="" solution="msdynce_AppCommonPatch201904 (9.0.26014.10001)" />
+        <Dependent type="1" schemaName="connection" displayName="Connection" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="customeraddress" displayName="CustomerAddress" parentSchemaName="" solution="msdynce_AppCommonPatch201904 (9.0.26014.10001)" />
@@ -148,12 +221,78 @@
         <Dependent type="1" schemaName="email" displayName="Email" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="1" schemaName="fax" displayName="Fax" parentSchemaName="" solution="msdynce_ActivitiesPatch (9.0.26014.260122001)" />
+        <Dependent type="1" schemaName="fax" displayName="Fax" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="feedback" displayName="Feedback" parentSchemaName="" solution="PowerPages_RuntimeCore (1.0.2509.1)" />
+        <Dependent type="1" schemaName="feedback" displayName="Feedback" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="letter" displayName="Letter" parentSchemaName="" solution="msdynce_ActivitiesPatch (9.0.26014.260122001)" />
+        <Dependent type="1" schemaName="letter" displayName="Letter" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="1" schemaName="phonecall" displayName="PhoneCall" parentSchemaName="" solution="msdynce_Activities (9.0.1.2033)" />
         <Dependent type="1" schemaName="phonecall" displayName="PhoneCall" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="1" schemaName="powerpagessiteaifeedback" displayName="Power Pages Site AI Feedback" solution="PowerPages_RuntimeExtensions (1.1.2501.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="1" schemaName="powerpagessiteaifeedback" displayName="Power Pages Site AI Feedback" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="recurringappointmentmaster" displayName="RecurringAppointmentMaster" parentSchemaName="" solution="msdynce_ActivitiesPatch (9.0.26014.260122001)" />
+        <Dependent type="1" schemaName="recurringappointmentmaster" displayName="RecurringAppointmentMaster" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="syncerror" displayName="SyncError" parentSchemaName="" solution="System (5.0)" />
+        <Dependent type="1" schemaName="syncerror" displayName="SyncError" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="1" schemaName="systemuser" displayName="SystemUser" parentSchemaName="" solution="msdyn_UserShareSecuredFields (1.0.0.0)" />
         <Dependent type="1" schemaName="systemuser" displayName="SystemUser" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="task" displayName="Task" parentSchemaName="" solution="msdynce_Activities (9.0.1.2033)" />
+        <Dependent type="1" schemaName="task" displayName="Task" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="adx_contact_externalidentity" displayName="adx_contact_externalidentity" parentSchemaName="contact" parentDisplayName="Contact" solution="PowerPages_RuntimeCore (1.0.2509.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="10" schemaName="adx_contact_externalidentity" displayName="adx_contact_externalidentity" parentSchemaName="contact" parentDisplayName="Contact" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="adx_invitation_invitecontact" displayName="adx_invitation_invitecontact" parentSchemaName="contact" parentDisplayName="Contact" solution="PowerPages_RuntimeCore (1.0.2509.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="10" schemaName="adx_invitation_invitecontact" displayName="adx_invitation_invitecontact" parentSchemaName="contact" parentDisplayName="Contact" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="adx_invitation_invitercontact" displayName="adx_invitation_invitercontact" parentSchemaName="contact" parentDisplayName="Contact" solution="PowerPages_RuntimeCore (1.0.2509.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="10" schemaName="adx_invitation_invitercontact" displayName="adx_invitation_invitercontact" parentSchemaName="contact" parentDisplayName="Contact" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="adx_invitation_redeemedContact" displayName="adx_invitation_redeemedContact" parentSchemaName="contact" parentDisplayName="Contact" solution="PowerPages_RuntimeCore (1.0.2509.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="10" schemaName="adx_invitation_redeemedContact" displayName="adx_invitation_redeemedContact" parentSchemaName="contact" parentDisplayName="Contact" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="adx_webformsession_contact" displayName="adx_webformsession_contact" parentSchemaName="contact" parentDisplayName="Contact" solution="PowerPages_RuntimeCore (1.0.2509.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="10" schemaName="adx_webformsession_contact" displayName="adx_webformsession_contact" parentSchemaName="contact" parentDisplayName="Contact" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="PowerPagesSiteAIFeedback_Contact_Contact" displayName="PowerPagesSiteAIFeedback_Contact_Contact" parentSchemaName="contact" parentDisplayName="Contact" solution="PowerPages_RuntimeExtensions (1.1.2501.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="10" schemaName="PowerPagesSiteAIFeedback_Contact_Contact" displayName="PowerPagesSiteAIFeedback_Contact_Contact" parentSchemaName="contact" parentDisplayName="Contact" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="accountid" displayName="accountid" parentSchemaName="account" solution="System (5.0)" />
@@ -176,12 +315,20 @@
         <Dependent type="2" schemaName="address1_country" displayName="address1_country" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="2" schemaName="address1_county" displayName="address1_county" parentSchemaName="contact" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_county" displayName="address1_county" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="2" schemaName="address1_latitude" displayName="address1_latitude" parentSchemaName="account" solution="System (5.0)" />
         <Dependent type="2" schemaName="address1_latitude" displayName="address1_latitude" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="address1_longitude" displayName="address1_longitude" parentSchemaName="account" solution="System (5.0)" />
         <Dependent type="2" schemaName="address1_longitude" displayName="address1_longitude" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_name" displayName="address1_name" parentSchemaName="contact" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_name" displayName="address1_name" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="address1_postalcode" displayName="address1_postalcode" parentSchemaName="account" solution="System (5.0)" />
@@ -192,52 +339,76 @@
         <Dependent type="2" schemaName="address1_stateorprovince" displayName="address1_stateorprovince" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="2" schemaName="address1_telephone1" displayName="address1_telephone1" parentSchemaName="contact" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_telephone1" displayName="address1_telephone1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_city" displayName="address2_city" parentSchemaName="contact" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_city" displayName="address2_city" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_country" displayName="address2_country" parentSchemaName="contact" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_country" displayName="address2_country" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_contact" displayName="Contact" parentSchemaName="adx_webformsession" parentDisplayName="Multistep Form Session" solution="PowerPages_RuntimeCore (1.0.2509.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="2" schemaName="adx_contact" displayName="Contact" parentSchemaName="adx_webformsession" parentDisplayName="Multistep Form Session" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_contactid" displayName="Contact" parentSchemaName="adx_externalidentity" parentDisplayName="External Identity" solution="PowerPages_RuntimeCore (1.0.2509.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="2" schemaName="adx_contactid" displayName="Contact" parentSchemaName="adx_externalidentity" parentDisplayName="External Identity" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_invitecontact" displayName="Invite Contact" parentSchemaName="adx_invitation" parentDisplayName="Invitation" solution="PowerPages_RuntimeCore (1.0.2509.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="2" schemaName="adx_invitecontact" displayName="Invite Contact" parentSchemaName="adx_invitation" parentDisplayName="Invitation" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_invitercontact" displayName="Inviter" parentSchemaName="adx_invitation" parentDisplayName="Invitation" solution="PowerPages_RuntimeCore (1.0.2509.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="2" schemaName="adx_invitercontact" displayName="Inviter" parentSchemaName="adx_invitation" parentDisplayName="Invitation" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_redeemedcontact" displayName="Redeemed Contact" parentSchemaName="adx_invitation" parentDisplayName="Invitation" solution="PowerPages_RuntimeCore (1.0.2509.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="2" schemaName="adx_redeemedcontact" displayName="Redeemed Contact" parentSchemaName="adx_invitation" parentDisplayName="Invitation" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="2" schemaName="bells_contacttype" displayName="Contact Type" parentSchemaName="account" parentDisplayName="Account" solution="Active" />
         <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="2" schemaName="bells_contacttype" displayName="Contact Type" parentSchemaName="contact" parentDisplayName="Contact" solution="Active" />
-        <Dependent type="60" displayName="Contact" parentDisplayName="Contact" id="{1fed44d1-ae68-4a41-bd2b-f13acac4acfa}" />
+        <Required type="2" schemaName="contact" displayName="Contact" parentSchemaName="powerpagessiteaifeedback" parentDisplayName="Power Pages Site AI Feedback" solution="PowerPages_RuntimeExtensions (1.1.2501.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="2" schemaName="contact" displayName="Contact" parentSchemaName="powerpagessiteaifeedback" parentDisplayName="Power Pages Site AI Feedback" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="2" schemaName="bells_email" displayName="Email" parentSchemaName="bells_landlord" parentDisplayName="Landlord" solution="Active" />
-        <Dependent type="70" displayName="Landlord manager" id="{95fb01a9-83e8-f011-8407-6045bddcfef9}" />
+        <Required type="2" schemaName="contactid" displayName="contactid" parentSchemaName="contact" solution="System (5.0)" />
+        <Dependent type="2" schemaName="contactid" displayName="contactid" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="createdby" displayName="createdby" parentSchemaName="account" solution="System (5.0)" />
         <Dependent type="2" schemaName="createdby" displayName="createdby" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="2" schemaName="emailaddress1" displayName="emailaddress1" parentSchemaName="contact" solution="System (5.0)" />
-        <Dependent type="2" schemaName="emailaddress1" displayName="emailaddress1" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required type="2" schemaName="firstname" displayName="firstname" parentSchemaName="contact" solution="System (5.0)" />
-        <Dependent type="2" schemaName="firstname" displayName="firstname" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required type="2" schemaName="fullname" displayName="fullname" parentSchemaName="contact" solution="System (5.0)" />
-        <Dependent type="2" schemaName="fullname" displayName="fullname" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required type="2" schemaName="jobtitle" displayName="jobtitle" parentSchemaName="contact" solution="System (5.0)" />
-        <Dependent type="2" schemaName="jobtitle" displayName="jobtitle" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required type="2" schemaName="lastname" displayName="lastname" parentSchemaName="contact" solution="System (5.0)" />
-        <Dependent type="2" schemaName="lastname" displayName="lastname" />
-      </MissingDependency>
-      <MissingDependency>
         <Required type="2" schemaName="masterid" displayName="masterid" parentSchemaName="account" solution="System (5.0)" />
         <Dependent type="2" schemaName="masterid" displayName="masterid" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="2" schemaName="mobilephone" displayName="mobilephone" parentSchemaName="contact" solution="System (5.0)" />
-        <Dependent type="2" schemaName="mobilephone" displayName="mobilephone" />
-      </MissingDependency>
-      <MissingDependency>
         <Required type="2" schemaName="name" displayName="name" parentSchemaName="account" solution="System (5.0)" />
         <Dependent type="2" schemaName="name" displayName="name" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="objectid" displayName="objectid" parentSchemaName="annotation" solution="System (5.0)" />
+        <Dependent type="2" schemaName="objectid" displayName="objectid" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="owningteam" displayName="owningteam" parentSchemaName="account" solution="System (5.0)" />
@@ -260,10 +431,6 @@
         <Dependent type="2" schemaName="parentid" displayName="parentid" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="2" schemaName="preferredcontactmethodcode" displayName="preferredcontactmethodcode" parentSchemaName="contact" solution="System (5.0)" />
-        <Dependent type="2" schemaName="preferredcontactmethodcode" displayName="preferredcontactmethodcode" />
-      </MissingDependency>
-      <MissingDependency>
         <Required type="2" schemaName="preferredsystemuserid" displayName="preferredsystemuserid" parentSchemaName="account" solution="System (5.0)" />
         <Dependent type="2" schemaName="preferredsystemuserid" displayName="preferredsystemuserid" />
       </MissingDependency>
@@ -272,14 +439,18 @@
         <Dependent type="2" schemaName="primarycontactid" displayName="primarycontactid" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="2" schemaName="regardingobjectid" displayName="regardingobjectid" parentSchemaName="appointment" solution="System (5.0)" />
-        <Dependent type="2" schemaName="regardingobjectid" displayName="regardingobjectid" />
+        <Required type="2" schemaName="record1id" displayName="record1id" parentSchemaName="connection" solution="System (5.0)" />
+        <Dependent type="2" schemaName="record1id" displayName="record1id" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="60" displayName="Contact" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{1fed44d1-ae68-4a41-bd2b-f13acac4acfa}">
-          <package appName="msdynce_AppCommon" version="9.0.26014.10001">msdynce_AppCommonAnchor (9.0.26014.10001)</package>
+        <Required type="2" schemaName="record2id" displayName="record2id" parentSchemaName="connection" solution="System (5.0)" />
+        <Dependent type="2" schemaName="record2id" displayName="record2id" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="regardingobjectid" displayName="Regarding" parentSchemaName="chat" parentDisplayName="Teams chat" solution="msdynce_ActivitiesPatch (9.0.26014.260122001)">
+          <package appName="msdynce_Activities" version="9.0.26014.260122001">msdynce_EnableUCIByDefault (9.0.26014.260122001)</package>
         </Required>
-        <Dependent type="60" displayName="Contact" parentDisplayName="Contact" id="{1fed44d1-ae68-4a41-bd2b-f13acac4acfa}" />
+        <Dependent type="2" schemaName="regardingobjectid" displayName="Regarding" parentSchemaName="chat" parentDisplayName="Teams chat" />
       </MissingDependency>
       <MissingDependency>
         <Required type="60" displayName="account contact card" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{29de27bc-a257-4f29-99cf-bab4a84e688f}">
@@ -324,10 +495,6 @@
         <Dependent type="60" displayName="Information" parentDisplayName="Account" id="{b053a39a-041a-4356-acef-ddf00182762b}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="61" schemaName="bells_load_contact" displayName="bells_load_contact" solution="Active" />
-        <Dependent type="60" displayName="Contact" parentDisplayName="Contact" id="{1fed44d1-ae68-4a41-bd2b-f13acac4acfa}" />
-      </MissingDependency>
-      <MissingDependency>
         <Required type="61" schemaName="bells_load_contactform" displayName="bells_load_contactform" solution="Active" />
         <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
       </MissingDependency>
@@ -351,17 +518,25 @@
         <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2601.4009)">
           <package appName="Base Custom Controls" version="9.0.2601.4009">BaseCustomControlsCore (9.0.2601.4009)</package>
         </Required>
-        <Dependent type="60" displayName="Contact" parentDisplayName="Contact" id="{1fed44d1-ae68-4a41-bd2b-f13acac4acfa}" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2601.4009)">
-          <package appName="Base Custom Controls" version="9.0.2601.4009">BaseCustomControlsCore (9.0.2601.4009)</package>
-        </Required>
         <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="connectionreference" displayName="cr981_expenseTracker.shared_commondataserviceforapps.16ec2424f3e941859b7c1c78d1174c06" solution="Active" id.connectionreferencelogicalname="cr981_expenseTracker.shared_commondataserviceforapps.16ec2424f3e941859b7c1c78d1174c06" />
-        <Dependent type="29" displayName="Drug Expiration Notification" id="{09b78ebd-4efc-f011-8406-002248a08132}" />
+        <Required type="appaction" displayName="msdyn_Mscrm.Form.contact.Activate!contact!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.Form.contact.Activate!contact!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction" displayName="msdyn_Mscrm.Form.contact.Activate!contact!0" id.uniquename="msdyn_Mscrm.Form.contact.Activate!contact!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appaction" displayName="msdyn_Mscrm.Form.contact.Deactivate!contact!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.Form.contact.Deactivate!contact!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction" displayName="msdyn_Mscrm.Form.contact.Deactivate!contact!0" id.uniquename="msdyn_Mscrm.Form.contact.Deactivate!contact!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appaction" displayName="msdyn_Mscrm.Form.contact.Delete!contact!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.Form.contact.Delete!contact!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction" displayName="msdyn_Mscrm.Form.contact.Delete!contact!0" id.uniquename="msdyn_Mscrm.Form.contact.Delete!contact!0" />
       </MissingDependency>
       <MissingDependency>
         <Required type="connectionreference" displayName="cr981_expenseTracker.shared_commondataserviceforapps.16ec2424f3e941859b7c1c78d1174c06" solution="Active" id.connectionreferencelogicalname="cr981_expenseTracker.shared_commondataserviceforapps.16ec2424f3e941859b7c1c78d1174c06" />

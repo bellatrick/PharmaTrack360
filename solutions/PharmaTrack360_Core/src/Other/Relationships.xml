@@ -7,6 +7,11 @@
   <EntityRelationship Name="account_parent_account" />
   <EntityRelationship Name="Account_Phonecalls" />
   <EntityRelationship Name="account_primary_contact" />
+  <EntityRelationship Name="adx_contact_externalidentity" />
+  <EntityRelationship Name="adx_invitation_invitecontact" />
+  <EntityRelationship Name="adx_invitation_invitercontact" />
+  <EntityRelationship Name="adx_invitation_redeemedContact" />
+  <EntityRelationship Name="adx_webformsession_contact" />
   <EntityRelationship Name="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" />
   <EntityRelationship Name="business_unit_pharma_calllog" />
   <EntityRelationship Name="business_unit_pharma_commissionrule" />
@@ -25,11 +30,25 @@
   <EntityRelationship Name="business_unit_pharma_samplerequest" />
   <EntityRelationship Name="business_unit_pharma_supplier" />
   <EntityRelationship Name="business_unit_pharma_territory" />
-  <EntityRelationship Name="contact_customer_accounts" />
+  <EntityRelationship Name="contact_actioncard" unmodified="1" />
+  <EntityRelationship Name="contact_adx_inviteredemptions" />
+  <EntityRelationship Name="contact_adx_portalcomments" />
+  <EntityRelationship Name="Contact_Annotation" unmodified="1" />
+  <EntityRelationship Name="Contact_Appointments" unmodified="1" />
+  <EntityRelationship Name="contact_chats" />
+  <EntityRelationship Name="contact_connections1" unmodified="1" />
+  <EntityRelationship Name="contact_connections2" unmodified="1" />
   <EntityRelationship Name="contact_customer_contacts" />
+  <EntityRelationship Name="Contact_CustomerAddress" unmodified="1" />
   <EntityRelationship Name="Contact_Emails" />
+  <EntityRelationship Name="Contact_Faxes" unmodified="1" />
+  <EntityRelationship Name="Contact_Feedback" unmodified="1" />
+  <EntityRelationship Name="Contact_Letters" unmodified="1" />
   <EntityRelationship Name="contact_master_contact" />
-  <EntityRelationship Name="contact_owning_user" />
+  <EntityRelationship Name="Contact_Phonecalls" unmodified="1" />
+  <EntityRelationship Name="Contact_RecurringAppointmentMasters" unmodified="1" />
+  <EntityRelationship Name="Contact_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="Contact_Tasks" unmodified="1" />
   <EntityRelationship Name="lk_pharma_calllog_createdby" />
   <EntityRelationship Name="lk_pharma_calllog_modifiedby" />
   <EntityRelationship Name="lk_pharma_commissionrule_createdby" />
@@ -113,10 +132,9 @@
   <EntityRelationship Name="pharma_samplerequest_SalesRep_pharma_salesrep" />
   <EntityRelationship Name="pharma_supplier_ContactPerson_contact" />
   <EntityRelationship Name="pharma_Territory_pharma_SalesRep" />
+  <EntityRelationship Name="PowerPagesSiteAIFeedback_Contact_Contact" />
   <EntityRelationship Name="system_user_accounts" />
-  <EntityRelationship Name="system_user_contacts" />
   <EntityRelationship Name="team_accounts" />
-  <EntityRelationship Name="team_contacts" />
   <EntityRelationship Name="team_pharma_calllog" />
   <EntityRelationship Name="team_pharma_commissionrule" />
   <EntityRelationship Name="team_pharma_compliancelog" />
