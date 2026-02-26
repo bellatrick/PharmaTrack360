@@ -17,20 +17,42 @@ jobs:
   deploy-to-test:
     runs-on: windows-latest
     environment: Test
+    env:
+      SOLUTION_NAME: ${{ github.event.inputs.solution_name || 'PharmaTrack360_Core' }}
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.PAT_TOKEN }}
 
     - name: Setup Power Platform CLI
       uses: microsoft/powerplatform-actions/actions-install@v1
 
-    - name: Pack solution
-      uses: microsoft/powerplatform-actions/pack-solution@v1
-      with:
-        solution-file: solutions/${{ github.event.inputs.solution_name }}/${{ github.event.inputs.solution_name }}_managed.zip
-        solution-folder: solutions/${{ github.event.inputs.solution_name }}/src
-        solution-type: Managed
+    - name: Bump solution version
+      shell: pwsh
+      run: |
+        $xmlPath = "solutions/${{ env.SOLUTION_NAME }}/src/Other/Solution.xml"
+        [xml]$xml = Get-Content $xmlPath -Encoding UTF8
+        $current = $xml.ImportExportXml.SolutionManifest.Version
+        $newVersion = "1.0.${{ github.run_number }}.0"
+        $xml.ImportExportXml.SolutionManifest.Version = $newVersion
+        $xml.Save((Resolve-Path $xmlPath))
+        Write-Host "Version bumped: $current → $newVersion"
+
+    - name: Commit version bump
+      shell: pwsh
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "actions@github.com"
+        git add solutions/${{ env.SOLUTION_NAME }}/src/Other/Solution.xml
+        $status = git status --porcelain
+        if ($status) {
+          git commit -m "chore: bump solution version to 1.0.${{ github.run_number }}.0 [skip ci]"
+          git push
+        } else {
+          Write-Host "No version change to commit."
+        }
 
     - name: Import solution to TEST
       uses: microsoft/powerplatform-actions/import-solution@v1
@@ -39,7 +61,7 @@ jobs:
         app-id: ${{ secrets.TEST_CLIENT_ID }}
         client-secret: ${{ secrets.TEST_CLIENT_SECRET }}
         tenant-id: ${{ secrets.TENANT_ID }}
-        solution-file: solutions/${{ github.event.inputs.solution_name }}/${{ github.event.inputs.solution_name }}_managed.zip
+        solution-file: solutions/${{ env.SOLUTION_NAME }}/${{ env.SOLUTION_NAME }}_managed.zip
         force-overwrite: true
         publish-changes: true
         skip-dependency-check: false
@@ -51,7 +73,7 @@ jobs:
         app-id: ${{ secrets.TEST_CLIENT_ID }}
         client-secret: ${{ secrets.TEST_CLIENT_SECRET }}
         tenant-id: ${{ secrets.TENANT_ID }}
-        path: solutions/${{ github.event.inputs.solution_name }}/${{ github.event.inputs.solution_name }}_managed.zip
+        path: solutions/${{ env.SOLUTION_NAME }}/${{ env.SOLUTION_NAME }}_managed.zip
         checker-logs-artifact-name: solution-checker-logs
 
     - name: Upload Solution Checker Results
@@ -64,4 +86,9 @@ jobs:
     - name: Send notification
       if: success()
       run: |
-        echo "✅ Solution deployed successfully to TEST environment"
+        echo "✅ Solution ${{ env.SOLUTION_NAME }} v1.0.${{ github.run_number }}.0 deployed successfully to TEST environment"
+
+    - name: Notify on failure
+      if: failure()
+      run: |
+        echo "❌ Deployment of ${{ env.SOLUTION_NAME }} to TEST failed on run #${{ github.run_number }}"
