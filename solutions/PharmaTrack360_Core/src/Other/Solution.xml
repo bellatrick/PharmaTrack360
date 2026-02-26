@@ -6,7 +6,7 @@
       <LocalizedName description="PharmaTrack360_Core" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
-    <Version>1.0.0.1</Version>
+    <Version>1.0.0.2</Version>
     <Managed>0</Managed>
     <Publisher>
       <UniqueName>PharmaTrack</UniqueName>
@@ -289,14 +289,36 @@
         <Dependent type="10" schemaName="adx_webformsession_contact" displayName="adx_webformsession_contact" parentSchemaName="contact" parentDisplayName="Contact" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="10" schemaName="msa_account_managingpartner" displayName="msa_account_managingpartner" parentSchemaName="account" parentDisplayName="Account" solution="PowerPages_RuntimeCoreDependencies (1.0.2305.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="10" schemaName="msa_account_managingpartner" displayName="msa_account_managingpartner" parentSchemaName="account" parentDisplayName="Account" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="10" schemaName="PowerPagesSiteAIFeedback_Contact_Contact" displayName="PowerPagesSiteAIFeedback_Contact_Contact" parentSchemaName="contact" parentDisplayName="Contact" solution="PowerPages_RuntimeExtensions (1.1.2501.1)">
           <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
         </Required>
         <Dependent type="10" schemaName="PowerPagesSiteAIFeedback_Contact_Contact" displayName="PowerPagesSiteAIFeedback_Contact_Contact" parentSchemaName="contact" parentDisplayName="Contact" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="2" schemaName="accountcategorycode" displayName="accountcategorycode" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="accountcategorycode" displayName="accountcategorycode" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="accountclassificationcode" displayName="accountclassificationcode" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="accountclassificationcode" displayName="accountclassificationcode" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="2" schemaName="accountid" displayName="accountid" parentSchemaName="account" solution="System (5.0)" />
         <Dependent type="2" schemaName="accountid" displayName="accountid" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="accountnumber" displayName="accountnumber" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="accountnumber" displayName="accountnumber" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="accountratingcode" displayName="accountratingcode" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="accountratingcode" displayName="accountratingcode" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="address1_addresstypecode" displayName="address1_addresstypecode" parentSchemaName="account" solution="System (5.0)" />
@@ -315,19 +337,39 @@
         <Dependent type="2" schemaName="address1_country" displayName="address1_country" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="2" schemaName="address1_county" displayName="address1_county" parentSchemaName="contact" solution="System (5.0)" />
+        <Required type="2" schemaName="address1_county" displayName="address1_county" parentSchemaName="account" solution="System (5.0)" />
         <Dependent type="2" schemaName="address1_county" displayName="address1_county" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_fax" displayName="address1_fax" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_fax" displayName="address1_fax" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_freighttermscode" displayName="address1_freighttermscode" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_freighttermscode" displayName="address1_freighttermscode" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="address1_latitude" displayName="address1_latitude" parentSchemaName="account" solution="System (5.0)" />
         <Dependent type="2" schemaName="address1_latitude" displayName="address1_latitude" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="2" schemaName="address1_line1" displayName="address1_line1" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_line1" displayName="address1_line1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_line2" displayName="address1_line2" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_line2" displayName="address1_line2" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_line3" displayName="address1_line3" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_line3" displayName="address1_line3" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="2" schemaName="address1_longitude" displayName="address1_longitude" parentSchemaName="account" solution="System (5.0)" />
         <Dependent type="2" schemaName="address1_longitude" displayName="address1_longitude" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="2" schemaName="address1_name" displayName="address1_name" parentSchemaName="contact" solution="System (5.0)" />
+        <Required type="2" schemaName="address1_name" displayName="address1_name" parentSchemaName="account" solution="System (5.0)" />
         <Dependent type="2" schemaName="address1_name" displayName="address1_name" />
       </MissingDependency>
       <MissingDependency>
@@ -335,20 +377,132 @@
         <Dependent type="2" schemaName="address1_postalcode" displayName="address1_postalcode" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="2" schemaName="address1_postofficebox" displayName="address1_postofficebox" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_postofficebox" displayName="address1_postofficebox" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_primarycontactname" displayName="address1_primarycontactname" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_primarycontactname" displayName="address1_primarycontactname" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_shippingmethodcode" displayName="address1_shippingmethodcode" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_shippingmethodcode" displayName="address1_shippingmethodcode" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="2" schemaName="address1_stateorprovince" displayName="address1_stateorprovince" parentSchemaName="account" solution="System (5.0)" />
         <Dependent type="2" schemaName="address1_stateorprovince" displayName="address1_stateorprovince" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="2" schemaName="address1_telephone1" displayName="address1_telephone1" parentSchemaName="contact" solution="System (5.0)" />
+        <Required type="2" schemaName="address1_telephone1" displayName="address1_telephone1" parentSchemaName="account" solution="System (5.0)" />
         <Dependent type="2" schemaName="address1_telephone1" displayName="address1_telephone1" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="2" schemaName="address2_city" displayName="address2_city" parentSchemaName="contact" solution="System (5.0)" />
+        <Required type="2" schemaName="address1_telephone2" displayName="address1_telephone2" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_telephone2" displayName="address1_telephone2" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_telephone3" displayName="address1_telephone3" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_telephone3" displayName="address1_telephone3" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_upszone" displayName="address1_upszone" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_upszone" displayName="address1_upszone" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_utcoffset" displayName="address1_utcoffset" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address1_utcoffset" displayName="address1_utcoffset" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_addresstypecode" displayName="address2_addresstypecode" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_addresstypecode" displayName="address2_addresstypecode" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_city" displayName="address2_city" parentSchemaName="account" solution="System (5.0)" />
         <Dependent type="2" schemaName="address2_city" displayName="address2_city" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="2" schemaName="address2_country" displayName="address2_country" parentSchemaName="contact" solution="System (5.0)" />
+        <Required type="2" schemaName="address2_composite" displayName="address2_composite" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_composite" displayName="address2_composite" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_country" displayName="address2_country" parentSchemaName="account" solution="System (5.0)" />
         <Dependent type="2" schemaName="address2_country" displayName="address2_country" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_county" displayName="address2_county" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_county" displayName="address2_county" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_fax" displayName="address2_fax" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_fax" displayName="address2_fax" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_freighttermscode" displayName="address2_freighttermscode" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_freighttermscode" displayName="address2_freighttermscode" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_latitude" displayName="address2_latitude" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_latitude" displayName="address2_latitude" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_line1" displayName="address2_line1" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_line1" displayName="address2_line1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_line2" displayName="address2_line2" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_line2" displayName="address2_line2" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_line3" displayName="address2_line3" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_line3" displayName="address2_line3" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_longitude" displayName="address2_longitude" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_longitude" displayName="address2_longitude" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_name" displayName="address2_name" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_name" displayName="address2_name" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_postalcode" displayName="address2_postalcode" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_postalcode" displayName="address2_postalcode" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_postofficebox" displayName="address2_postofficebox" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_postofficebox" displayName="address2_postofficebox" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_primarycontactname" displayName="address2_primarycontactname" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_primarycontactname" displayName="address2_primarycontactname" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_shippingmethodcode" displayName="address2_shippingmethodcode" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_shippingmethodcode" displayName="address2_shippingmethodcode" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_stateorprovince" displayName="address2_stateorprovince" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_stateorprovince" displayName="address2_stateorprovince" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_telephone1" displayName="address2_telephone1" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_telephone1" displayName="address2_telephone1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_telephone2" displayName="address2_telephone2" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_telephone2" displayName="address2_telephone2" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_telephone3" displayName="address2_telephone3" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_telephone3" displayName="address2_telephone3" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_upszone" displayName="address2_upszone" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_upszone" displayName="address2_upszone" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address2_utcoffset" displayName="address2_utcoffset" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="address2_utcoffset" displayName="address2_utcoffset" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="adx_contact" displayName="Contact" parentSchemaName="adx_webformsession" parentDisplayName="Multistep Form Session" solution="PowerPages_RuntimeCore (1.0.2509.1)">
@@ -361,6 +515,18 @@
           <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
         </Required>
         <Dependent type="2" schemaName="adx_contactid" displayName="Contact" parentSchemaName="adx_externalidentity" parentDisplayName="External Identity" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_createdbyipaddress" displayName="Created By (IP Address)" parentSchemaName="account" parentDisplayName="Account" solution="PowerPages_RuntimeCoreDependencies (1.0.2305.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="2" schemaName="adx_createdbyipaddress" displayName="Created By (IP Address)" parentSchemaName="account" parentDisplayName="Account" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_createdbyusername" displayName="Created By (User Name)" parentSchemaName="account" parentDisplayName="Account" solution="PowerPages_RuntimeCoreDependencies (1.0.2305.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="2" schemaName="adx_createdbyusername" displayName="Created By (User Name)" parentSchemaName="account" parentDisplayName="Account" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="adx_invitecontact" displayName="Invite Contact" parentSchemaName="adx_invitation" parentDisplayName="Invitation" solution="PowerPages_RuntimeCore (1.0.2509.1)">
@@ -381,8 +547,32 @@
         <Dependent type="2" schemaName="adx_redeemedcontact" displayName="Redeemed Contact" parentSchemaName="adx_invitation" parentDisplayName="Invitation" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="2" schemaName="bells_contacttype" displayName="Contact Type" parentSchemaName="account" parentDisplayName="Account" solution="Active" />
-        <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+        <Required type="2" schemaName="aging30" displayName="aging30" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="aging30" displayName="aging30" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="aging30_base" displayName="aging30_base" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="aging30_base" displayName="aging30_base" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="aging60" displayName="aging60" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="aging60" displayName="aging60" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="aging60_base" displayName="aging60_base" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="aging60_base" displayName="aging60_base" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="aging90" displayName="aging90" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="aging90" displayName="aging90" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="aging90_base" displayName="aging90_base" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="aging90_base" displayName="aging90_base" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="businesstypecode" displayName="businesstypecode" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="businesstypecode" displayName="businesstypecode" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="contact" displayName="Contact" parentSchemaName="powerpagessiteaifeedback" parentDisplayName="Power Pages Site AI Feedback" solution="PowerPages_RuntimeExtensions (1.1.2501.1)">
@@ -399,8 +589,122 @@
         <Dependent type="2" schemaName="createdby" displayName="createdby" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="2" schemaName="createdbyexternalparty" displayName="createdbyexternalparty" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="createdbyexternalparty" displayName="createdbyexternalparty" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="createdon" displayName="createdon" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="createdon" displayName="createdon" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="createdonbehalfby" displayName="createdonbehalfby" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="createdonbehalfby" displayName="createdonbehalfby" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="creditlimit" displayName="creditlimit" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="creditlimit" displayName="creditlimit" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="creditlimit_base" displayName="creditlimit_base" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="creditlimit_base" displayName="creditlimit_base" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="creditonhold" displayName="creditonhold" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="creditonhold" displayName="creditonhold" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="customersizecode" displayName="customersizecode" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="customersizecode" displayName="customersizecode" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="description" displayName="description" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="description" displayName="description" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="donotbulkemail" displayName="donotbulkemail" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="donotbulkemail" displayName="donotbulkemail" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="donotbulkpostalmail" displayName="donotbulkpostalmail" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="donotbulkpostalmail" displayName="donotbulkpostalmail" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="donotemail" displayName="donotemail" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="donotemail" displayName="donotemail" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="donotfax" displayName="donotfax" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="donotfax" displayName="donotfax" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="donotphone" displayName="donotphone" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="donotphone" displayName="donotphone" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="donotpostalmail" displayName="donotpostalmail" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="donotpostalmail" displayName="donotpostalmail" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="emailaddress1" displayName="emailaddress1" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="emailaddress1" displayName="emailaddress1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="emailaddress2" displayName="emailaddress2" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="emailaddress2" displayName="emailaddress2" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="emailaddress3" displayName="emailaddress3" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="emailaddress3" displayName="emailaddress3" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="entityimage" displayName="entityimage" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="entityimage" displayName="entityimage" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="exchangerate" displayName="exchangerate" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="exchangerate" displayName="exchangerate" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="fax" displayName="fax" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="fax" displayName="fax" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="followemail" displayName="followemail" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="followemail" displayName="followemail" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ftpsiteurl" displayName="ftpsiteurl" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="ftpsiteurl" displayName="ftpsiteurl" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="importsequencenumber" displayName="importsequencenumber" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="importsequencenumber" displayName="importsequencenumber" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="lastonholdtime" displayName="lastonholdtime" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="lastonholdtime" displayName="lastonholdtime" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="lastusedincampaign" displayName="lastusedincampaign" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="lastusedincampaign" displayName="lastusedincampaign" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="marketcap" displayName="marketcap" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="marketcap" displayName="marketcap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="marketcap_base" displayName="marketcap_base" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="marketcap_base" displayName="marketcap_base" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="2" schemaName="masterid" displayName="masterid" parentSchemaName="account" solution="System (5.0)" />
         <Dependent type="2" schemaName="masterid" displayName="masterid" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msa_managingpartnerid" displayName="Managing Partner" parentSchemaName="account" parentDisplayName="Account" solution="PowerPages_RuntimeCoreDependencies (1.0.2305.1)">
+          <package appName="Power Pages Core Package" version="1.1.2510.212">PowerPages_Core (1.1.2510.212)</package>
+        </Required>
+        <Dependent type="2" schemaName="msa_managingpartnerid" displayName="Managing Partner" parentSchemaName="account" parentDisplayName="Account" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="name" displayName="name" parentSchemaName="account" solution="System (5.0)" />
@@ -409,14 +713,6 @@
       <MissingDependency>
         <Required type="2" schemaName="objectid" displayName="objectid" parentSchemaName="annotation" solution="System (5.0)" />
         <Dependent type="2" schemaName="objectid" displayName="objectid" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required type="2" schemaName="owningteam" displayName="owningteam" parentSchemaName="account" solution="System (5.0)" />
-        <Dependent type="2" schemaName="owningteam" displayName="owningteam" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required type="2" schemaName="owninguser" displayName="owninguser" parentSchemaName="account" solution="System (5.0)" />
-        <Dependent type="2" schemaName="owninguser" displayName="owninguser" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="parentaccountid" displayName="parentaccountid" parentSchemaName="account" solution="System (5.0)" />
@@ -431,8 +727,8 @@
         <Dependent type="2" schemaName="parentid" displayName="parentid" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="2" schemaName="preferredsystemuserid" displayName="preferredsystemuserid" parentSchemaName="account" solution="System (5.0)" />
-        <Dependent type="2" schemaName="preferredsystemuserid" displayName="preferredsystemuserid" />
+        <Required type="2" schemaName="preferredcontactmethodcode" displayName="preferredcontactmethodcode" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="preferredcontactmethodcode" displayName="preferredcontactmethodcode" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="primarycontactid" displayName="primarycontactid" parentSchemaName="account" solution="System (5.0)" />
@@ -453,54 +749,28 @@
         <Dependent type="2" schemaName="regardingobjectid" displayName="Regarding" parentSchemaName="chat" parentDisplayName="Teams chat" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="60" displayName="account contact card" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{29de27bc-a257-4f29-99cf-bab4a84e688f}">
-          <package appName="msdynce_AppCommon" version="9.0.26014.10001">msdynce_AppCommonAnchor (9.0.26014.10001)</package>
-        </Required>
-        <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+        <Required type="2" schemaName="revenue" displayName="revenue" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="revenue" displayName="revenue" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="60" displayName="account contact card" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{29de27bc-a257-4f29-99cf-bab4a84e688f}">
-          <package appName="msdynce_AppCommon" version="9.0.26014.10001">msdynce_AppCommonAnchor (9.0.26014.10001)</package>
-        </Required>
-        <Dependent type="60" displayName="Account for Interactive experience" parentDisplayName="Account" id="{a72c7955-442b-4ea4-9499-b10cd18b4256}" />
+        <Required type="2" schemaName="revenue_base" displayName="revenue_base" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="revenue_base" displayName="revenue_base" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="60" displayName="Account" parentDisplayName="Account" solution="msdynce_AppCommon (9.0.4.0066)" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}">
-          <package appName="msdynce_AppCommon" version="9.0.26014.10001">msdynce_AppCommonAnchor (9.0.26014.10001)</package>
-        </Required>
-        <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+        <Required type="2" schemaName="slainvokedid" displayName="slainvokedid" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="slainvokedid" displayName="slainvokedid" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="60" displayName="Account for Interactive experience" parentDisplayName="Account" solution="msdynce_AppCommon (9.0.4.0066)" id="{a72c7955-442b-4ea4-9499-b10cd18b4256}">
-          <package appName="msdynce_AppCommon" version="9.0.26014.10001">msdynce_AppCommonAnchor (9.0.26014.10001)</package>
-        </Required>
-        <Dependent type="60" displayName="Account for Interactive experience" parentDisplayName="Account" id="{a72c7955-442b-4ea4-9499-b10cd18b4256}" />
+        <Required type="2" schemaName="telephone1" displayName="telephone1" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="telephone1" displayName="telephone1" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="60" displayName="Information" parentDisplayName="Account" solution="msdynce_AppCommon (9.0.4.0066)" id="{b053a39a-041a-4356-acef-ddf00182762b}">
-          <package appName="msdynce_AppCommon" version="9.0.26014.10001">msdynce_AppCommonAnchor (9.0.26014.10001)</package>
-        </Required>
-        <Dependent type="60" displayName="Information" parentDisplayName="Account" id="{b053a39a-041a-4356-acef-ddf00182762b}" />
+        <Required type="2" schemaName="transactioncurrencyid" displayName="transactioncurrencyid" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="transactioncurrencyid" displayName="transactioncurrencyid" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="61" schemaName="AppCommon/Account/Account_main_system_library.js" displayName="AppCommon/Account/Account_main_system_library.js" solution="msdynce_AppCommon (9.0.4.0066)">
-          <package appName="msdynce_AppCommon" version="9.0.26014.10001">msdynce_AppCommonAnchor (9.0.26014.10001)</package>
-        </Required>
-        <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required type="61" schemaName="AppCommon/Account/Account_main_system_library.js" displayName="AppCommon/Account/Account_main_system_library.js" solution="msdynce_AppCommon (9.0.4.0066)">
-          <package appName="msdynce_AppCommon" version="9.0.26014.10001">msdynce_AppCommonAnchor (9.0.26014.10001)</package>
-        </Required>
-        <Dependent type="60" displayName="Information" parentDisplayName="Account" id="{b053a39a-041a-4356-acef-ddf00182762b}" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required type="61" schemaName="bells_load_contactform" displayName="bells_load_contactform" solution="Active" />
-        <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required type="61" schemaName="bells_populatename" displayName="bells_populatename" solution="Active" />
-        <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+        <Required type="2" schemaName="traversedpath" displayName="traversedpath" parentSchemaName="account" solution="System (5.0)" />
+        <Dependent type="2" schemaName="traversedpath" displayName="traversedpath" />
       </MissingDependency>
       <MissingDependency>
         <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)">
@@ -513,12 +783,6 @@
           <package appName="Base Custom Controls" version="9.0.2601.4009">BaseCustomControlsCore (9.0.2601.4009)</package>
         </Required>
         <Dependent type="26" schemaName="Active PurchaseOrders" displayName="Active PurchaseOrders" parentSchemaName="pharma_purchaseorder" parentDisplayName="PurchaseOrder" id="{1e47f310-3df2-4189-987b-223cd1c2ead1}" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2601.4009)">
-          <package appName="Base Custom Controls" version="9.0.2601.4009">BaseCustomControlsCore (9.0.2601.4009)</package>
-        </Required>
-        <Dependent type="60" displayName="Account" parentDisplayName="Account" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="appaction" displayName="msdyn_Mscrm.Form.contact.Activate!contact!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.Form.contact.Activate!contact!0">
@@ -537,14 +801,6 @@
           <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
         </Required>
         <Dependent type="appaction" displayName="msdyn_Mscrm.Form.contact.Delete!contact!0" id.uniquename="msdyn_Mscrm.Form.contact.Delete!contact!0" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required type="connectionreference" displayName="cr981_expenseTracker.shared_commondataserviceforapps.16ec2424f3e941859b7c1c78d1174c06" solution="Active" id.connectionreferencelogicalname="cr981_expenseTracker.shared_commondataserviceforapps.16ec2424f3e941859b7c1c78d1174c06" />
-        <Dependent type="29" displayName="Deactivate expired drugs batches" id="{9d2af397-5dff-f011-8406-7c1e5220c199}" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required type="connectionreference" displayName="cr981_expenseTracker.shared_commondataserviceforapps.16ec2424f3e941859b7c1c78d1174c06" solution="Active" id.connectionreferencelogicalname="cr981_expenseTracker.shared_commondataserviceforapps.16ec2424f3e941859b7c1c78d1174c06" />
-        <Dependent type="29" displayName="Remove expired products" id="{a95dcc5a-5800-f111-8406-000d3ab8539d}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="SettingDefinition" displayName="AppChannel" solution="msdyn_AppFrameworkInfraExtensions (1.0.0.15)" id.uniquename="AppChannel">

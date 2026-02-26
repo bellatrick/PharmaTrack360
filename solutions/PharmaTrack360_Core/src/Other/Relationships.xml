@@ -6,7 +6,6 @@
   <EntityRelationship Name="account_master_account" />
   <EntityRelationship Name="account_parent_account" />
   <EntityRelationship Name="Account_Phonecalls" />
-  <EntityRelationship Name="account_primary_contact" />
   <EntityRelationship Name="adx_contact_externalidentity" />
   <EntityRelationship Name="adx_invitation_invitecontact" />
   <EntityRelationship Name="adx_invitation_invitercontact" />
@@ -87,6 +86,7 @@
   <EntityRelationship Name="lk_pharma_supplier_modifiedby" />
   <EntityRelationship Name="lk_pharma_territory_createdby" />
   <EntityRelationship Name="lk_pharma_territory_modifiedby" />
+  <EntityRelationship Name="msa_account_managingpartner" />
   <EntityRelationship Name="organization_pharma_salesopportunitiestocommissions" />
   <EntityRelationship Name="owner_pharma_calllog" />
   <EntityRelationship Name="owner_pharma_commissionrule" />
@@ -133,8 +133,6 @@
   <EntityRelationship Name="pharma_supplier_ContactPerson_contact" />
   <EntityRelationship Name="pharma_Territory_pharma_SalesRep" />
   <EntityRelationship Name="PowerPagesSiteAIFeedback_Contact_Contact" />
-  <EntityRelationship Name="system_user_accounts" />
-  <EntityRelationship Name="team_accounts" />
   <EntityRelationship Name="team_pharma_calllog" />
   <EntityRelationship Name="team_pharma_commissionrule" />
   <EntityRelationship Name="team_pharma_compliancelog" />
@@ -159,7 +157,6 @@
   <EntityRelationship Name="TransactionCurrency_pharma_PurchaseOrderLineItem" />
   <EntityRelationship Name="TransactionCurrency_pharma_QuotaTarget" />
   <EntityRelationship Name="TransactionCurrency_pharma_SalesRep" />
-  <EntityRelationship Name="user_accounts" />
   <EntityRelationship Name="user_pharma_calllog" />
   <EntityRelationship Name="user_pharma_commissionrule" />
   <EntityRelationship Name="user_pharma_compliancelog" />
