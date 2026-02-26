@@ -1,3 +1,0 @@
-pharma_achievedrevenue: =If(RoundUp(Decimal(pharma_revenueachieved)*100/Decimal(pharma_revenuetarget),2) >=100, "True", "False")
-pharma_achievement: =RoundUp(Decimal(pharma_revenueachieved)*100/Decimal(pharma_revenuetarget),2)
-pharma_quotaid: =Concatenate(pharma_SalesRep.pharma_salesrepname,"-",pharma_quotaname)

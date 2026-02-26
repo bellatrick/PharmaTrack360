@@ -1,3 +1,0 @@
-pharma_approvalrequired: =pharma_discountapplied > 10
-pharma_commissionamount: =pharma_actualsaleamount / (pharma_commissionrate * 100)
-pharma_commissionrate: =pharma_Owner.pharma_commissionrate

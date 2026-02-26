@@ -1,1 +1,0 @@
-pharma_linetotal: =pharma_quantityordered * Decimal(pharma_unitcost)
