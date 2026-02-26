@@ -11,7 +11,7 @@ on:
       solution_name:
         description: 'Solution name to deploy'
         required: true
-        default: 'PharmaTrack360'
+        default: 'PharmaTrack360_Core'
 
 jobs:
   deploy-to-test:
