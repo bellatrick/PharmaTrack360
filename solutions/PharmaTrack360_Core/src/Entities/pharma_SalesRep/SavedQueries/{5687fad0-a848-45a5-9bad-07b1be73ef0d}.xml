@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{5687fad0-a848-45a5-9bad-07b1be73ef0d}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="pharma_salesrepname" select="1" icon="1" preview="1">
+        <row name="result" id="pharma_salesrepid">
+          <cell name="pharma_salesrepname" width="300" />
+          <cell name="pharma_manager" width="150" />
+          <cell name="pharma_territory" width="150" />
+          <cell name="pharma_hiredate" width="150" />
+          <cell name="pharma_deviceassigned" width="150" />
+          <cell name="pharma_targetquota" width="150" />
+          <cell name="pharma_active" width="150" />
+          <cell name="pharma_phone" width="150" />
+          <cell name="pharma_user" width="150" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="pharma_salesrep">
+          <attribute name="pharma_salesrepid" />
+          <attribute name="pharma_salesrepname" />
+          <attribute name="createdon" />
+          <order attribute="pharma_salesrepname" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="pharma_manager" />
+          <attribute name="pharma_territory" />
+          <attribute name="pharma_hiredate" />
+          <attribute name="pharma_deviceassigned" />
+          <attribute name="pharma_targetquota" />
+          <attribute name="pharma_active" />
+          <attribute name="pharma_phone" />
+          <attribute name="pharma_user" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active SalesReps" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

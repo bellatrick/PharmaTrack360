@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{1276e403-55ae-4f4c-bdbf-97db8fb1a0e7}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{8240e875-40d0-4b2f-8a4e-eabfbc287e57}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{60cf7b9c-5772-494e-a4cb-673d52bb73e6}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{85c4384e-5c86-4e7a-9ffb-e840e0ea4fb5}">
+                        <labels>
+                          <label description="Product Name" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_productname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="pharma_productname" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{82a5d253-fa7b-4e92-ba83-570bba5d1933}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f45d472b-68a1-4a32-b3f7-a22014c0e9d6}">
+                        <labels>
+                          <label description="SKU" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_sku" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="pharma_sku" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{480836e0-fbc1-46e5-8ce7-b53a052348af}">
+                        <labels>
+                          <label description="Dosage Form" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_dosageform" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="pharma_dosageform" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{31b2c963-95b7-463a-871a-fdace81b3171}">
+                        <labels>
+                          <label description="Pack Size" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_packsize" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="pharma_packsize" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4086506d-7ad0-4982-958d-6c07d8540cd7}">
+                        <labels>
+                          <label description="List Price" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_listprice" classid="{533b9e00-756b-4312-95a0-dc888637ac78}" datafieldname="pharma_listprice" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{028499ef-c3cd-4453-a25c-8a6550fff712}">
+                        <labels>
+                          <label description="Therapeutic Area" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_therapeuticarea" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="pharma_therapeuticarea" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{28953438-7124-460f-8f2e-718f3c911b83}">
+                        <labels>
+                          <label description="Active" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_active" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="pharma_active" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{17d6cc70-ff00-491c-805d-b5fb79292a0e}">
+                        <labels>
+                          <label description="Storage Requirement" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_storagerequirement" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="pharma_storagerequirement" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fa2baed8-1a9e-4123-a940-3dff8db363b1}">
+                        <labels>
+                          <label description="Manufacturer Lot" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_manufacturerlot" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="pharma_manufacturerlot" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{378ddcdc-320f-f111-8406-7ced8d7608a8}" Name="Sales opportunities to commissions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/Salesopportunitiestocommissions-378DDCDC-320F-F111-8406-7CED8D7608A8.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>pharma_salesopportunitiestocommissions</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <ModernFlowType>0</ModernFlowType>
+  <PrimaryEntity>pharma_Opportunity</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Sales opportunities to commissions" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{08bae153-c60d-47bc-9276-0245ce905fb5}">
+      <label languagecode="1033" description="Lead Qualification" />
+    </steplabels>
+    <steplabels id="{1d7d335c-ffae-4ba6-b610-5b6fc167cadb}">
+      <label languagecode="1033" description="Sales Rep" />
+    </steplabels>
+    <steplabels id="{9554143b-648a-4070-8bc1-6300c3cd1334}">
+      <label languagecode="1033" description="Account" />
+    </steplabels>
+    <steplabels id="{e80618d8-8d10-4d15-93ba-58dbe8e9aac0}">
+      <label languagecode="1033" description="Estimated value" />
+    </steplabels>
+    <steplabels id="{8e428da2-be99-4f89-b8b7-dbcc43adb953}">
+      <label languagecode="1033" description="Product Category" />
+    </steplabels>
+    <steplabels id="{4e6bf838-3ee5-46a6-94a7-f946517effab}">
+      <label languagecode="1033" description="Lead Source" />
+    </steplabels>
+    <steplabels id="{b8c26113-6cd1-4841-9295-c8f6c8682d11}">
+      <label languagecode="1033" description="Stage" />
+    </steplabels>
+    <steplabels id="{3cb20efe-962d-4ea0-84a4-3fccf19b7a86}">
+      <label languagecode="1033" description="Quote" />
+    </steplabels>
+    <steplabels id="{6ed82637-958c-4354-aa50-e891c93ec0f8}">
+      <label languagecode="1033" description="Quote amount" />
+    </steplabels>
+    <steplabels id="{5e6ec4a2-1ca8-4b20-9c3d-93c8da29c8aa}">
+      <label languagecode="1033" description="Quote sent date" />
+    </steplabels>
+    <steplabels id="{bd2d505f-5b95-4eb9-9d89-0b592802669a}">
+      <label languagecode="1033" description="Quote accepted" />
+    </steplabels>
+    <steplabels id="{04c079a6-f123-4a70-8147-c3a5d3e28fd9}">
+      <label languagecode="1033" description="Negotiation" />
+    </steplabels>
+    <steplabels id="{ea37cdce-05d0-4479-8b8d-b05b5a4d3354}">
+      <label languagecode="1033" description="Negotiation amount" />
+    </steplabels>
+    <steplabels id="{a80a4fd7-cb7c-4cef-96df-de53b1116acd}">
+      <label languagecode="1033" description="Approval required" />
+    </steplabels>
+    <steplabels id="{10c55ef5-3080-4762-b48a-2e779307c6e3}">
+      <label languagecode="1033" description="Discount applied" />
+    </steplabels>
+    <steplabels id="{750359cf-a4dd-4a03-b7ca-621b43abd72d}">
+      <label languagecode="1033" description="Stage" />
+    </steplabels>
+    <steplabels id="{e214f0c6-9aac-4752-9666-47047dc0ed64}">
+      <label languagecode="1033" description="Closed" />
+    </steplabels>
+    <steplabels id="{9ea401d3-d563-4b1b-8608-9af2ae2ab49b}">
+      <label languagecode="1033" description="Actual sale amount" />
+    </steplabels>
+    <steplabels id="{4578b961-f2f6-4a7f-9b3c-697bfbd79306}">
+      <label languagecode="1033" description="Commission Rate" />
+    </steplabels>
+    <steplabels id="{7cacd9a4-e5d5-48cc-b394-e613c0f8c4aa}">
+      <label languagecode="1033" description="Commission amount" />
+    </steplabels>
+    <steplabels id="{c8209f00-3cba-4ae1-81d6-492872879e6b}">
+      <label languagecode="1033" description="Close Date" />
+    </steplabels>
+    <steplabels id="{000ba1b4-b847-49da-8bd9-cadd01932ebf}">
+      <label languagecode="1033" description="Closed Lost" />
+    </steplabels>
+    <steplabels id="{257edcf8-6daa-4fcb-b510-8074577339e2}">
+      <label languagecode="1033" description="Reason Lost" />
+    </steplabels>
+  </labels>
+</Workflow>

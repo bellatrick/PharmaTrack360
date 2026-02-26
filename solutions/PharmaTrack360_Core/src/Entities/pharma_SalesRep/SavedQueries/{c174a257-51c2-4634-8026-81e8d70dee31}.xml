@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{c174a257-51c2-4634-8026-81e8d70dee31}</savedqueryid>
+    <layoutxml>
+      <grid name="pharma_salesreps" jump="pharma_salesrepname" select="1" icon="1" preview="1">
+        <row name="pharma_salesrep" id="pharma_salesrepid">
+          <cell name="pharma_salesrepname" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="pharma_salesrep">
+          <attribute name="pharma_salesrepid" />
+          <attribute name="pharma_salesrepname" />
+          <attribute name="createdon" />
+          <order attribute="pharma_salesrepname" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="SalesRep Associated View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

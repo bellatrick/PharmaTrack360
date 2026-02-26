@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{e5544899-3f22-469a-8118-aed4a1c541a8}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{08bae153-c60d-47bc-9276-0245ce905fb5}" name="StageStep3" locklevel="0" expanded="true" visible="false" labelid="{c6bf465a-802a-4ada-83c3-8642e9f05c0c}">
+          <labels>
+            <label description="Lead Qualification" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{61638edc-a75a-69a0-64b0-51c24053ee8a}" name="StageStep3_section1" labelid="{6bdabaec-1b86-4021-941f-da10a91979f1}">
+                  <labels>
+                    <label description="Lead Qualification" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{1d7d335c-ffae-4ba6-b610-5b6fc167cadb}" showlabel="true" visible="true" labelid="{a2ad42bc-dcb0-4a3e-aaea-f680f2a362c6}">
+                        <labels>
+                          <label description="Sales Rep" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_owner" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="pharma_owner" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9554143b-648a-4070-8bc1-6300c3cd1334}" showlabel="true" visible="true" labelid="{398ece62-f6e5-4324-a2e9-f3d0c90c014f}">
+                        <labels>
+                          <label description="Account" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_account" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="pharma_account" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e80618d8-8d10-4d15-93ba-58dbe8e9aac0}" showlabel="true" visible="true" labelid="{ebe263a1-5af4-4d78-a08f-71e3972c35b6}">
+                        <labels>
+                          <label description="Estimated value" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_estimatedvalue" classid="{533b9e00-756b-4312-95a0-dc888637ac78}" datafieldname="pharma_estimatedvalue" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8e428da2-be99-4f89-b8b7-dbcc43adb953}" showlabel="true" visible="true" labelid="{be34c813-b1dd-4bcf-8877-954fc40b8d3c}">
+                        <labels>
+                          <label description="Product Category" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_productcategory" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="pharma_productcategory" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4e6bf838-3ee5-46a6-94a7-f946517effab}" showlabel="true" visible="true" labelid="{490f50e7-a37d-4e28-baa6-016755bc1596}">
+                        <labels>
+                          <label description="Lead Source" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_source" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="pharma_source" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b8c26113-6cd1-4841-9295-c8f6c8682d11}" showlabel="true" visible="true" labelid="{48dae2a9-5d19-4a38-accc-df5ead79519d}">
+                        <labels>
+                          <label description="Stage" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_stage" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="pharma_stage" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{3cb20efe-962d-4ea0-84a4-3fccf19b7a86}" name="StageStep17" locklevel="0" expanded="true" visible="false" labelid="{e7eb9d26-8b7c-48b9-87fc-bc776c651af0}">
+          <labels>
+            <label description="Quote" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{f6d41e43-6aee-4e94-e092-530fdefb6dd0}" name="StageStep17_section1" labelid="{c5a7386e-8717-4dc8-87fe-5226f4c384ae}">
+                  <labels>
+                    <label description="Quote" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{6ed82637-958c-4354-aa50-e891c93ec0f8}" showlabel="true" visible="true" labelid="{8b7e1684-426d-4309-922f-15f3bd1209d1}">
+                        <labels>
+                          <label description="Quote amount" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_quoteamount" classid="{533b9e00-756b-4312-95a0-dc888637ac78}" datafieldname="pharma_quoteamount" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5e6ec4a2-1ca8-4b20-9c3d-93c8da29c8aa}" showlabel="true" visible="true" labelid="{4e993584-89a8-46d6-b555-a9db7dbd7705}">
+                        <labels>
+                          <label description="Quote sent date" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_quotesentdate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="pharma_quotesentdate" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bd2d505f-5b95-4eb9-9d89-0b592802669a}" showlabel="true" visible="true" labelid="{6a299230-0995-47dc-aef4-dd0b036dd612}">
+                        <labels>
+                          <label description="Quote accepted" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_quoteaccepted" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="pharma_quoteaccepted" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{04c079a6-f123-4a70-8147-c3a5d3e28fd9}" name="StageStep25" locklevel="0" expanded="true" visible="false" labelid="{cb60115b-a3f7-4dea-a694-edb04549b41b}">
+          <labels>
+            <label description="Negotiation" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{0caa95b5-37e7-46ab-4b38-5ea8b367a596}" name="StageStep25_section1" labelid="{792fb9da-4f89-4b49-bd17-4357d2f7e45a}">
+                  <labels>
+                    <label description="Negotiation" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ea37cdce-05d0-4479-8b8d-b05b5a4d3354}" showlabel="true" visible="true" labelid="{4aafb9e9-ae64-49d8-a946-a0a5cdfa8697}">
+                        <labels>
+                          <label description="Negotiation amount" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_negotiationamount" classid="{533b9e00-756b-4312-95a0-dc888637ac78}" datafieldname="pharma_negotiationamount" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a80a4fd7-cb7c-4cef-96df-de53b1116acd}" showlabel="true" visible="true" labelid="{7ab2011a-4e82-4fb0-830a-aacf8f5b046c}">
+                        <labels>
+                          <label description="Approval required" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_approvalrequired" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="pharma_approvalrequired" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{10c55ef5-3080-4762-b48a-2e779307c6e3}" showlabel="true" visible="true" labelid="{f2983a1a-2130-411f-88d7-bbb5de32dec1}">
+                        <labels>
+                          <label description="Discount applied" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_discountapplied" classid="{c3efe0c3-0ec6-42be-8349-cbd9079dfd8e}" datafieldname="pharma_discountapplied" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{750359cf-a4dd-4a03-b7ca-621b43abd72d}" showlabel="true" visible="true" labelid="{a98cedb5-c49c-40cd-8d5b-9874b6ac2539}">
+                        <labels>
+                          <label description="Stage" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_stage" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="pharma_stage" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{e214f0c6-9aac-4752-9666-47047dc0ed64}" name="StageStep35" locklevel="0" expanded="true" visible="false" labelid="{f41ff0b8-e8c5-4e42-87d2-5bc704a78891}">
+          <labels>
+            <label description="Closed" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{c8f7bcde-f0b8-bd2a-87a4-8bcd85b03390}" name="StageStep35_section1" labelid="{44c1bbdf-8bd5-4f55-9de0-8317d6b215b8}">
+                  <labels>
+                    <label description="Closed" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{9ea401d3-d563-4b1b-8608-9af2ae2ab49b}" showlabel="true" visible="true" labelid="{ff6f22c6-4aef-4f9b-b082-281ea1027568}">
+                        <labels>
+                          <label description="Actual sale amount" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_actualsaleamount" classid="{c3efe0c3-0ec6-42be-8349-cbd9079dfd8e}" datafieldname="pharma_actualsaleamount" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4578b961-f2f6-4a7f-9b3c-697bfbd79306}" showlabel="true" visible="true" labelid="{82c4b157-a38a-4948-ad20-b2c47c674276}">
+                        <labels>
+                          <label description="Commission Rate" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_commissionrate" classid="{c3efe0c3-0ec6-42be-8349-cbd9079dfd8e}" datafieldname="pharma_commissionrate" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7cacd9a4-e5d5-48cc-b394-e613c0f8c4aa}" showlabel="true" visible="true" labelid="{9ddc911a-8bb2-40ce-b79e-f11444bff2e7}">
+                        <labels>
+                          <label description="Commission amount" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_commissionamount" classid="{c3efe0c3-0ec6-42be-8349-cbd9079dfd8e}" datafieldname="pharma_commissionamount" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c8209f00-3cba-4ae1-81d6-492872879e6b}" showlabel="true" visible="true" labelid="{bd7b418d-015c-4124-9c0b-0a96ea7896df}">
+                        <labels>
+                          <label description="Close Date" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_closedate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="pharma_closedate" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{000ba1b4-b847-49da-8bd9-cadd01932ebf}" name="StageStep45" locklevel="0" expanded="true" visible="false" labelid="{61f3f9d0-9607-47ad-a280-66cc5f84c0ff}">
+          <labels>
+            <label description="Closed Lost" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{fddecf2c-3e53-933c-0fa6-eebdbd0e3c2b}" name="StageStep45_section1" labelid="{dcc16be0-e2a1-49ef-84c7-23dd933c732b}">
+                  <labels>
+                    <label description="Closed Lost" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{257edcf8-6daa-4fcb-b510-8074577339e2}" showlabel="true" visible="true" labelid="{c1698734-ca4b-4d01-a358-5d1734cd4c43}">
+                        <labels>
+                          <label description="Reason Lost" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_reasonlost" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="pharma_reasonlost" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

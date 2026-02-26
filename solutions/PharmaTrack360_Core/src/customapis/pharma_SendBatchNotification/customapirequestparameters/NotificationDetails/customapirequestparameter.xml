@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="NotificationDetails">
+  <description default="Details of the expired products">
+    <label description="Details of the expired products" languagecode="1033" />
+  </description>
+  <displayname default="NotificationDetails">
+    <label description="NotificationDetails" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>NotificationDetails</name>
+  <type>10</type>
+</customapirequestparameter>

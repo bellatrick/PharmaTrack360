@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{8ad074ad-76c5-40ea-9f19-9f0137a8ad62}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="pharma_quotaname" select="1" icon="1" preview="1">
+        <row name="result" id="pharma_quotatargetid">
+          <cell name="pharma_quotaname" width="300" />
+          <cell name="pharma_quotatarget1" width="150" />
+          <cell name="pharma_fiscalperiodstart" width="150" />
+          <cell name="pharma_fiscalperiodend" width="150" />
+          <cell name="pharma_revenuetarget" width="150" />
+          <cell name="pharma_unitstarget" width="150" />
+          <cell name="pharma_revenueachieved" width="150" />
+          <cell name="pharma_iscurrent" width="150" />
+          <cell name="pharma_salesrep" width="150" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="pharma_quotatarget">
+          <attribute name="pharma_quotatargetid" />
+          <attribute name="pharma_quotaname" />
+          <attribute name="createdon" />
+          <order attribute="pharma_quotaname" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="pharma_quotatarget1" />
+          <attribute name="pharma_fiscalperiodstart" />
+          <attribute name="pharma_fiscalperiodend" />
+          <attribute name="pharma_revenuetarget" />
+          <attribute name="pharma_unitstarget" />
+          <attribute name="pharma_revenueachieved" />
+          <attribute name="pharma_iscurrent" />
+          <attribute name="pharma_salesrep" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active QuotaTargets" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>
