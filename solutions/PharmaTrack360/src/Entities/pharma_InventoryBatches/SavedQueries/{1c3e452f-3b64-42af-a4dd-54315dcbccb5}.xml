@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{1c3e452f-3b64-42af-a4dd-54315dcbccb5}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="pharma_name" select="1" icon="1" preview="1">
+        <row name="result" id="pharma_inventorybatchesid">
+          <cell name="pharma_product" width="100" />
+          <cell name="pharma_daystillexpiration" width="148" />
+          <cell name="pharma_reorderpoint" width="119" />
+          <cell name="pharma_quantityremaining" width="151" />
+          <cell name="pharma_reorderquantity" width="138" />
+          <cell name="pharma_isreordered" width="112" />
+          <cell name="pharma_costperunit" width="110" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="pharma_inventorybatches">
+          <attribute name="pharma_inventorybatchesid" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="pharma_product" />
+          <attribute name="pharma_reorderpoint" />
+          <attribute name="pharma_reorderquantity" />
+          <attribute name="pharma_quantityremaining" />
+          <attribute name="pharma_isreordered" />
+          <attribute name="pharma_costperunit" />
+          <attribute name="pharma_daystillexpiration" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Inventory Batches" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

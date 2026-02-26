@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{15a4a362-8823-4882-b1ec-016774f49a41}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{c89ab4c1-cec5-40d3-a334-e07feab66fa8}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{fab8e17d-77ab-47ed-b25b-c60491aecd9b}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{21d85cf7-cec5-4911-bf14-fcc42770bb0f}">
+                        <labels>
+                          <label description="OpportunityLine Name" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_opportunitylinename" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="pharma_opportunitylinename" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ed53cf40-fd43-4020-a328-eb5b4b4cd379}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d1e1451e-e6ff-4b6d-a43e-21034fae4779}">
+                        <labels>
+                          <label description="Quantity" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_quantity" classid="{c6d124ca-7eda-4a60-aea9-7fb8d318b68f}" datafieldname="pharma_quantity" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{22da7e08-f541-49db-b4ed-3f0808e5a9b8}">
+                        <labels>
+                          <label description="Opportunity" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_opportunityid" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="pharma_opportunityid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{20e70af6-7db9-42ce-9822-ce5ad9c8134b}">
+                        <labels>
+                          <label description="Product" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_product" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="pharma_product" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{24332593-57fa-4086-b932-8f8dfc2d9c27}">
+                        <labels>
+                          <label description="new_unitprice" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_new_unitprice" classid="{533b9e00-756b-4312-95a0-dc888637ac78}" datafieldname="pharma_new_unitprice" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{109bf9aa-ffa6-4ede-ae84-f032115e252b}">
+                        <labels>
+                          <label description="new_linetotal" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_new_linetotal" classid="{533b9e00-756b-4312-95a0-dc888637ac78}" datafieldname="pharma_new_linetotal" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

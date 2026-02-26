@@ -1,0 +1,88 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "cr981_expenseTracker.shared_commondataserviceforapps.16ec2424f3e941859b7c1c78d1174c06"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "actions": {
+        "Update_a_row": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "pharma_inventorybatcheses",
+              "recordId": "@triggerBody()?['@odata.id']",
+              "item/statecode": 1
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "UpdateOnlyRecord",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {}
+        }
+      },
+      "triggers": {
+        "manual": {
+          "type": "Request",
+          "kind": "ApiConnection",
+          "inputs": {
+            "operationId": "RecordSelected",
+            "parameters": {
+              "entityName": "pharma_inventorybatcheses"
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "rows": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "entity": {
+                        "properties": {},
+                        "type": "object",
+                        "required": []
+                      }
+                    },
+                    "required": []
+                  }
+                }
+              },
+              "required": []
+            },
+            "host": {
+              "connection": {
+                "name": "@parameters('$connections')['shared_commondataserviceforapps']['connectionId']"
+              }
+            }
+          },
+          "splitOn": "@triggerBody()['rows']"
+        }
+      },
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

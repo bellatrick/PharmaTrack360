@@ -1,0 +1,15 @@
+<customapi uniquename="pharma_SendBatchNotification">
+  <allowedcustomprocessingsteptype>2</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="It sends an email notification to warehouse workers to remove expired inventory batches">
+    <label description="It sends an email notification to warehouse workers to remove expired inventory batches" languagecode="1033" />
+  </description>
+  <displayname default="Send Batch Notification">
+    <label description="Send Batch Notification" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>Send Batch Notification</name>
+  <workflowsdkstepenabled>1</workflowsdkstepenabled>
+</customapi>
