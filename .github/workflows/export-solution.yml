@@ -33,6 +33,18 @@ jobs:
                 app-id: ${{ secrets.DEV_CLIENT_ID }}
                 client-secret: ${{ secrets.DEV_CLIENT_SECRET }}
 
+            - name: Remove existing solution zips
+              shell: pwsh
+              run: |
+                $folder = "${{ github.event.inputs.solution_exported_folder }}"
+                $name   = "${{ github.event.inputs.solution_name }}"
+                @("$folder/${name}_unmanaged.zip", "$folder/${name}_managed.zip") | ForEach-Object {
+                  if (Test-Path $_) {
+                    Remove-Item $_ -Force
+                    Write-Host "Deleted: $_"
+                  }
+                }
+
             - name: Export unmanaged solution
               uses: microsoft/powerplatform-actions/export-solution@v1
               with:
