@@ -1,0 +1,9 @@
+pharma_referencenumber: |-
+    =Switch(pharma_transactiontype,
+    [@global_pharma_transactiontype].'4', "ADJ-" &Left(pharma_inventorytransactiontableid, 8),
+    [@global_pharma_transactiontype].'1', "RCP-" &Left(pharma_inventorytransactiontableid, 8),
+    [@global_pharma_transactiontype].'5', "RET-" &Left(pharma_inventorytransactiontableid, 8),
+    [@global_pharma_transactiontype].'2', "SAL-" &Left(pharma_inventorytransactiontableid, 8),
+    [@global_pharma_transactiontype].'3', "TRA-" &Left(pharma_inventorytransactiontableid, 8),
+    [@global_pharma_transactiontype].'6', "WAS-" &Left(pharma_inventorytransactiontableid, 8)
+    )

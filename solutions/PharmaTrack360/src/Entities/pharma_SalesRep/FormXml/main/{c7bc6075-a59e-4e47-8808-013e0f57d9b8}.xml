@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{c7bc6075-a59e-4e47-8808-013e0f57d9b8}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{63f6e15a-8e5a-4fdc-8a3b-3812bcd9a769}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{e18a625a-4fa7-4200-831c-6bd2df9138c9}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{67e8194a-8ad0-481a-a657-607a12e11aaf}">
+                        <labels>
+                          <label description="SalesRep Name" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_salesrepname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="pharma_salesrepname" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d83b11bf-c8ec-4512-a39a-c5bed0d1b8a2}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b75a817c-f884-41ca-8d94-e9e61ad0c702}">
+                        <labels>
+                          <label description="Manager" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_manager" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="pharma_manager" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{19873d1f-b2a2-4769-8fae-a01d6f5ddc91}">
+                        <labels>
+                          <label description="Territory" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_territory" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="pharma_territory" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9ae8a1a2-00b5-493a-9ddc-bfdd8bb33aae}">
+                        <labels>
+                          <label description="Hire Date" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_hiredate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="pharma_hiredate" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0752e861-9de1-4a1d-92f1-e7d68758b331}">
+                        <labels>
+                          <label description="Device Assigned" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_deviceassigned" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="pharma_deviceassigned" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3183bac4-3530-48aa-9c0d-013bc169f482}">
+                        <labels>
+                          <label description="Target Quota" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_targetquota" classid="{533b9e00-756b-4312-95a0-dc888637ac78}" datafieldname="pharma_targetquota" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1f59bdbb-f0ca-4cd3-923d-5bb52481c455}">
+                        <labels>
+                          <label description="Active" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_active" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="pharma_active" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4363e58c-64be-4806-8787-25ab3087ee9a}">
+                        <labels>
+                          <label description="Phone" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_phone" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="pharma_phone" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{92a846ca-7502-4113-84e9-2b01197e229b}">
+                        <labels>
+                          <label description="User" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_user" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="pharma_user" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

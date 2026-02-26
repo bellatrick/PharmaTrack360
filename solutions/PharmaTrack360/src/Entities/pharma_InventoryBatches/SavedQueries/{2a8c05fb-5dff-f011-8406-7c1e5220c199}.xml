@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{2a8c05fb-5dff-f011-8406-7c1e5220c199}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="pharma_name" select="1" icon="1" preview="1">
+        <row name="result" id="pharma_inventorybatchesid">
+          <cell name="pharma_name" width="200" />
+          <cell name="pharma_product" width="200" />
+          <cell name="pharma_expirationdate" width="200" />
+          <cell name="pharma_quantityremaining" width="200" />
+          <cell name="pharma_costperunit" width="200" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="pharma_inventorybatches">&lt;attribute name="pharma_name" /&gt;&lt;attribute name="pharma_product" /&gt;&lt;attribute name="pharma_expirationdate" /&gt;&lt;attribute name="pharma_quantityremaining" /&gt;&lt;attribute name="pharma_costperunit" /&gt;
+        
+        <attribute name="pharma_name" /><attribute name="pharma_product" /><attribute name="pharma_expirationdate" /><attribute name="pharma_quantityremaining" /><attribute name="pharma_costperunit" /><attribute name="pharma_inventorybatchesid" /><filter type="and"><condition attribute="pharma_daystillexpiration" operator="lt" value="1" /><condition attribute="statecode" operator="eq" value="0" /></filter></entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Expired Batches" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Shows batches that have expired" languagecode="1033" />
+    </Descriptions>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{11af9268-c174-43c7-b56f-337239aece79}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="pharma_name" select="1" icon="1" preview="1">
+        <row name="result" id="pharma_purchaseorderlineitemid">
+          <cell name="pharma_name" width="178" />
+          <cell name="pharma_product" width="100" />
+          <cell name="pharma_poline" width="124" />
+          <cell name="pharma_quantityordered" width="135" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="pharma_purchaseorderlineitem">
+          <attribute name="pharma_purchaseorderlineitemid" />
+          <attribute name="pharma_name" />
+          <order attribute="pharma_name" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="pharma_product" />
+          <attribute name="pharma_poline" />
+          <attribute name="pharma_quantityordered" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active PurchaseOrderLineItems" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{3155b5a5-1dfa-4790-87e1-ffe2764d63e4}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{496fc5a0-2fbc-402c-9c9d-b49b9f772d55}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{01851da4-6544-4487-87c0-0c0502751d68}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d13577d9-2535-47de-80a4-98918bab5667}">
+                        <labels>
+                          <label description="Case Name" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_casename" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="pharma_casename" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7453a942-97d6-476a-9157-b02a31f4e53f}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5583ed1b-ba13-4b7a-8f53-883f07d2ba43}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_status" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="pharma_status" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{022c4443-f871-4475-9042-36ad10a30894}">
+                        <labels>
+                          <label description="Reported Date" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_reporteddate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="pharma_reporteddate" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{dabc6e63-6828-43b2-9f1b-a986644176cc}">
+                        <labels>
+                          <label description="Is Resolved" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_isresolved" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="pharma_isresolved" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f6e8af56-5cdd-4b78-9ead-4ec2a3421955}">
+                        <labels>
+                          <label description="Case Type" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_casetype" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="pharma_casetype" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e047b50f-c0ee-4a53-b048-f0ec3de567f5}">
+                        <labels>
+                          <label description="Description" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_description" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="pharma_description" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{094c538d-5658-43f6-ad9d-0fdb4d930f79}">
+                        <labels>
+                          <label description="Severity" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_severity" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="pharma_severity" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3bae4a0c-b415-4019-8849-d271f8f5463c}">
+                        <labels>
+                          <label description="Investigation Notes" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_investigationnotes" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="pharma_investigationnotes" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5aa692a9-39ef-4a08-bcad-d443e0e5b2c6}">
+                        <labels>
+                          <label description="Escalation Flag" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_escalationflag" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="pharma_escalationflag" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

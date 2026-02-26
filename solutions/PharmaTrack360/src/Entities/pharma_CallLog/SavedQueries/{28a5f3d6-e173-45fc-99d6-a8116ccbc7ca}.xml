@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{28a5f3d6-e173-45fc-99d6-a8116ccbc7ca}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="pharma_callreference" select="1" icon="1" preview="1">
+        <row name="result" id="pharma_calllogid">
+          <cell name="pharma_callreference" width="300" />
+          <cell name="pharma_owner" width="150" />
+          <cell name="pharma_account" width="150" />
+          <cell name="pharma_calltype" width="150" />
+          <cell name="pharma_calldate" width="150" />
+          <cell name="pharma_durationminutes" width="150" />
+          <cell name="pharma_outcome" width="150" />
+          <cell name="pharma_notes" width="150" />
+          <cell name="pharma_nextfollowup" width="150" />
+          <cell name="pharma_gpslocation" width="150" />
+          <cell name="pharma_linkedopportunity" width="150" />
+          <cell name="pharma_syncstatus" width="150" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="pharma_calllog">
+          <attribute name="pharma_calllogid" />
+          <attribute name="pharma_callreference" />
+          <attribute name="createdon" />
+          <order attribute="pharma_callreference" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="pharma_owner" />
+          <attribute name="pharma_account" />
+          <attribute name="pharma_calltype" />
+          <attribute name="pharma_calldate" />
+          <attribute name="pharma_durationminutes" />
+          <attribute name="pharma_outcome" />
+          <attribute name="pharma_notes" />
+          <attribute name="pharma_nextfollowup" />
+          <attribute name="pharma_gpslocation" />
+          <attribute name="pharma_linkedopportunity" />
+          <attribute name="pharma_syncstatus" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active CallLogs" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

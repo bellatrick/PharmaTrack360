@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{25abda0b-c704-43ba-8b71-3bd96035b5a7}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{87d153d2-e5ab-44e2-a38f-61b637081280}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{905c9a48-e930-4c6c-ac05-fbaa167792b0}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{c66a7a92-81ff-4f6b-8a03-6be01eaac87a}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="pharma_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4cc5a2bf-43cd-4992-b3ba-c3a1b2812598}" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3e67bcb5-bb67-4485-b71e-88c6a9f4a304}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Expiration Date" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_expirationdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="pharma_expirationdate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5cce85d0-7338-4fee-bdd6-0c865d0a6c87}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Is Reordered" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_isreordered" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="pharma_isreordered" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7ae7310e-1ca4-4bf5-8a07-255a622df82c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="DaysTillExpiration" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_daystillexpiration" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="pharma_daystillexpiration" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e89fe5a3-59da-4aad-b950-765159cac29f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="QuantityRemaining" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_quantityremaining" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="pharma_quantityremaining" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{492bda82-26a9-4e35-94fc-0ce7d599b675}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="CostPerUnit" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_costperunit" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="pharma_costperunit" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f2863963-a13f-445e-a1d5-8bc3c34b2ed7}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Reorder Quantity" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_reorderquantity" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="pharma_reorderquantity" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5c5bbe32-bec3-42d3-a06a-f45381364d18}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Reorder Point" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_reorderpoint" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="pharma_reorderpoint" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{66cdcfc6-099a-4efa-acd9-4001d9d75758}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Product" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_product" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="pharma_product" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fee7c9ca-c4a5-45d5-8515-d57a3c35e224}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="QuantityReceived" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_quantityreceived" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="pharma_quantityreceived" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{8549614c-80b7-4e4f-96fd-8fa1430a9de7}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{cd4e5196-b50b-4c61-8684-d28c554df3df}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{1166f0f3-e615-4758-a814-61b90b961a0e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{375944bc-323d-46c4-9a6d-75e6b8b4f8f9}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{87d5d346-43f7-4f7c-b05b-a775e4de0083}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{f2168a3a-9d8f-4edc-919a-a7a65884107a}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{d619ac22-9ce2-46b0-b2c5-a13f743b1b05}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{a3c421d1-1859-4ff5-9c04-2b841963661e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

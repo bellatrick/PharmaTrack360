@@ -1,0 +1,14 @@
+function togglePOLineSubgrid(executionContext) {
+    var formContext = executionContext.getFormContext();
+
+    var formType = formContext.ui.getFormType();
+    var subgrid = formContext.getControl("line_item_subgrid");
+
+    if (!subgrid) return;
+
+    if (formType === 2) {
+        subgrid.setVisible(true);
+    } else {
+        subgrid.setVisible(false);
+    }
+}

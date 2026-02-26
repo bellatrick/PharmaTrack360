@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{fc80de56-021e-44f3-9e5b-02100d474668}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="pharma_samplerequest1" select="1" icon="1" preview="1">
+        <row name="result" id="pharma_samplerequestid">
+          <cell name="pharma_samplerequest1" width="300" />
+          <cell name="pharma_quantityrequested" width="150" />
+          <cell name="pharma_quantityapproved" width="150" />
+          <cell name="pharma_status" width="150" />
+          <cell name="pharma_approvalhistory" width="150" />
+          <cell name="pharma_deliveryconfirmation" width="150" />
+          <cell name="pharma_requesteddate" width="150" />
+          <cell name="pharma_salesrep" width="150" />
+          <cell name="pharma_account" width="150" />
+          <cell name="pharma_contact" width="150" />
+          <cell name="pharma_linkedcall" width="150" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="pharma_samplerequest">
+          <attribute name="pharma_samplerequestid" />
+          <attribute name="pharma_samplerequest1" />
+          <attribute name="createdon" />
+          <order attribute="pharma_samplerequest1" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="pharma_quantityrequested" />
+          <attribute name="pharma_quantityapproved" />
+          <attribute name="pharma_status" />
+          <attribute name="pharma_approvalhistory" />
+          <attribute name="pharma_deliveryconfirmation" />
+          <attribute name="pharma_requesteddate" />
+          <attribute name="pharma_salesrep" />
+          <attribute name="pharma_account" />
+          <attribute name="pharma_contact" />
+          <attribute name="pharma_linkedcall" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active SampleRequests" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>
