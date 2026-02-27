@@ -58,6 +58,13 @@ jobs:
           Write-Host "No version change to commit."
         }
 
+    - name: Pack solution
+      uses: microsoft/powerplatform-actions/pack-solution@v1.0.0
+      with:
+        solution-folder: solutions/${{ env.SOLUTION_NAME }}/src
+        solution-file: solutions/${{ env.SOLUTION_NAME }}/${{ env.SOLUTION_NAME }}_managed.zip
+        solution-type: Managed
+
     - name: Import solution to TEST
       uses: microsoft/powerplatform-actions/import-solution@v1.0.0
       with:
