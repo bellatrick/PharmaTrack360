@@ -31,7 +31,6 @@
   <EntityRelationship Name="business_unit_pharma_territory" />
   <EntityRelationship Name="contact_actioncard" unmodified="1" />
   <EntityRelationship Name="contact_adx_inviteredemptions" />
-  <EntityRelationship Name="contact_adx_portalcomments" />
   <EntityRelationship Name="Contact_Annotation" unmodified="1" />
   <EntityRelationship Name="Contact_Appointments" unmodified="1" />
   <EntityRelationship Name="contact_chats" />
@@ -132,7 +131,6 @@
   <EntityRelationship Name="pharma_samplerequest_SalesRep_pharma_salesrep" />
   <EntityRelationship Name="pharma_supplier_ContactPerson_contact" />
   <EntityRelationship Name="pharma_Territory_pharma_SalesRep" />
-  <EntityRelationship Name="PowerPagesSiteAIFeedback_Contact_Contact" />
   <EntityRelationship Name="team_pharma_calllog" />
   <EntityRelationship Name="team_pharma_commissionrule" />
   <EntityRelationship Name="team_pharma_compliancelog" />

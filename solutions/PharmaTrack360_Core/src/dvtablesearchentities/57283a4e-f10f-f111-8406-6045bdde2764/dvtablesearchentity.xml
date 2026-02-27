@@ -1,9 +1,0 @@
-<dvtablesearchentity dvtablesearchentityid="57283a4e-f10f-f111-8406-6045bdde2764">
-  <dvtablesearch>
-    <dvtablesearchid>ae5c29bc-26bb-f011-bbd2-7ced8d75b1c8</dvtablesearchid>
-  </dvtablesearch>
-  <entitylogicalname>pharma_purchaseorderlineitem</entitylogicalname>
-  <iscustomizable>1</iscustomizable>
-  <statecode>0</statecode>
-  <statuscode>1</statuscode>
-</dvtablesearchentity>
