@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{e9b882e6-6ede-438a-b0ff-5e5fbc175a34}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{38bcf1f6-c82c-4edf-beba-2f8353ae5bcd}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{75cd87d8-5fcd-4cb9-a189-13793e0e932e}" columns="11">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{61f20e83-514d-4739-9b7a-b79d64c174fb}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="pharma_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{04b54cc3-e272-47b0-9cab-8b1328b2e2fb}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_orderstatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="pharma_orderstatus" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{43e93b9e-88d1-4164-bf0d-f357077229b0}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c2954f6c-9b1a-402a-ad2c-5cdedcadd89b}" visible="false">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                      <cell locklevel="0" id="{cd722ebb-21eb-4103-92ce-f04e3d90a915}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{430230eb-2f9d-417b-8f39-9c5e7a1ac7c0}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_expecteddeliverydate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="pharma_expecteddeliverydate" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{eea76cdf-1bb6-4087-a678-c7edf252d1ff}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4b6e0e8a-b2a8-4ea5-b5ff-95880871b730}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_actualdeliverydate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="pharma_actualdeliverydate" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{54d6a59f-1a10-486a-8496-ce0d49d959d6}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f0e31fa3-096d-43f3-99da-81254a06aab3}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_approvalstatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="pharma_approvalstatus" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{b4e9da2a-e936-4c3e-802c-fae9fa8b1086}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{c86d84a8-735c-431c-965d-5a86f5b19cda}" rowspan="4" colspan="1" auto="false">
+                        <labels>
+                          <label description="Line Items" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="line_item_subgrid" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <RelationshipName>pharma_purchaseorderlineitem_POLine_pharma_purchaseorder</RelationshipName>
+                            <TargetEntityType>pharma_purchaseorderlineitem</TargetEntityType>
+                            <ViewId>{11AF9268-C174-43C7-B56F-337239AECE79}</ViewId>
+                            <ViewIds>{11AF9268-C174-43C7-B56F-337239AECE79}</ViewIds>
+                          </parameters>
+                        </control>
+                      </cell>
+                      <cell locklevel="0" id="{85ace949-0696-4054-a1da-35207b4054dc}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{3988de0a-4fa9-4a8d-b57d-7a88df4466fc}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{4bc2263c-3815-4a62-b1cb-929f200cdeda}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{7c3e967e-b5dd-4d5d-a85d-3e0e7d064ce1}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{327200c4-4147-4b01-9cbf-c87ee2a2ac5b}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{d3f77a56-e174-4f7f-9817-2078f9fbb422}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{fd6c6714-d031-4bca-9f7f-07cc30a5f7ae}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{90f4278b-a524-4878-970b-a64fb52c5812}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{700dd488-95e0-4937-b238-ae0f3748f75b}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{aef1c521-f71f-4286-bf43-3128d90289e8}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{0431c460-78bb-4589-911e-3523119b929a}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{a477089a-2cb7-4e59-baa7-1ae7f651d809}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+      <formLibraries>
+        <Library name="pharma_togglePOLineSubgrid" libraryUniqueId="{f5d1d702-4d8f-476b-b40c-82ddc91f08ea}" />
+      </formLibraries>
+      <events>
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="togglePOLineSubgrid" libraryName="pharma_togglePOLineSubgrid" handlerUniqueId="{19ad8487-1feb-4cf7-ac8b-0625ed629480}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

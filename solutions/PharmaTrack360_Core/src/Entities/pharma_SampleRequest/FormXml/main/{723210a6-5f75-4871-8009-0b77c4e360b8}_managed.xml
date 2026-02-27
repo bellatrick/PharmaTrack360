@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{723210a6-5f75-4871-8009-0b77c4e360b8}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{5ea0e8ef-0c30-4d9e-adf0-858783e9d5b5}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{90226da3-e077-44e3-b990-29ddd581fc94}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{5f41d228-e477-4b22-8d00-0c31638967cd}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_samplerequest1" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="pharma_samplerequest1" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b2f96935-e633-45b3-a7fb-f2d9a912a903}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{15be0199-8673-4846-8b0d-5b1647673aac}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_quantityrequested" classid="{c6d124ca-7eda-4a60-aea9-7fb8d318b68f}" datafieldname="pharma_quantityrequested" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{262c1ff0-1f0d-4168-aab4-eb0b901c6530}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_quantityapproved" classid="{c6d124ca-7eda-4a60-aea9-7fb8d318b68f}" datafieldname="pharma_quantityapproved" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8135acf9-e065-4d5d-9d13-3c7c984d99be}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_status" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="pharma_status" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cba822c5-5c2f-4614-b28b-96697806ad0c}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_approvalhistory" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="pharma_approvalhistory" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{39eaa15a-986d-43ba-a75b-066c69354f68}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_deliveryconfirmation" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="pharma_deliveryconfirmation" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{59a717bf-7592-4f17-b5cd-2c3d3cb2a791}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_requesteddate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="pharma_requesteddate" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{adf63be3-2c94-46a2-ab12-8d61546542c7}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_salesrep" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="pharma_salesrep" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bb7dff29-56a4-4071-89a2-32582994837f}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_account" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="pharma_account" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4be245e6-1f52-46b1-8ceb-40c73630c326}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_contact" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="pharma_contact" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6c151f5a-5baf-42e6-8e73-7ed47b7d5f0c}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_linkedcall" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="pharma_linkedcall" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>
