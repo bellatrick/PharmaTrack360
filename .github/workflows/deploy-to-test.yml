@@ -70,7 +70,7 @@ jobs:
         publish-changes: true
         skip-dependency-check: false
         run-asynchronously: true
-        max-async-wait-time: 15
+        max-async-wait-time: 60
 
     - name: Run Solution Checker
       uses: microsoft/powerplatform-actions/check-solution@v1.0.0
