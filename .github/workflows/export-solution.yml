@@ -72,7 +72,7 @@ jobs:
               with:
                 solution-file: ${{ github.event.inputs.solution_exported_folder }}/${{ github.event.inputs.solution_name }}_unmanaged.zip
                 solution-folder: ${{ github.event.inputs.solution_exported_folder }}/src
-                solution-type: Unmanaged
+                solution-type: Managed
                 overwrite-files: true
 
             - name: Commit and push changes
