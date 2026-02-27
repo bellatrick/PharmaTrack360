@@ -30,15 +30,19 @@ jobs:
       uses: microsoft/powerplatform-actions/actions-install@v1
 
     - name: Bump solution version
+      id: bump_version
       shell: pwsh
       run: |
         $xmlPath = "solutions/${{ env.SOLUTION_NAME }}/src/Other/Solution.xml"
         [xml]$xml = Get-Content $xmlPath -Encoding UTF8
         $current = $xml.ImportExportXml.SolutionManifest.Version
-        $newVersion = "1.0.${{ github.run_number }}.0"
+        $parts = $current -split '\.'
+        $parts[3] = [int]$parts[3] + 1
+        $newVersion = $parts -join '.'
         $xml.ImportExportXml.SolutionManifest.Version = $newVersion
         $xml.Save((Resolve-Path $xmlPath))
         Write-Host "Version bumped: $current → $newVersion"
+        echo "new_version=$newVersion" >> $env:GITHUB_OUTPUT
 
     - name: Commit version bump
       shell: pwsh
@@ -48,7 +52,7 @@ jobs:
         git add solutions/${{ env.SOLUTION_NAME }}/src/Other/Solution.xml
         $status = git status --porcelain
         if ($status) {
-          git commit -m "chore: bump solution version to 1.0.${{ github.run_number }}.0 [skip ci]"
+          git commit -m "chore: bump solution version to ${{ steps.bump_version.outputs.new_version }} [skip ci]"
           git push
         } else {
           Write-Host "No version change to commit."
@@ -86,7 +90,7 @@ jobs:
     - name: Send notification
       if: success()
       run: |
-        echo "✅ Solution ${{ env.SOLUTION_NAME }} v1.0.${{ github.run_number }}.0 deployed successfully to TEST environment"
+        echo "✅ Solution ${{ env.SOLUTION_NAME }} v${{ steps.bump_version.outputs.new_version }} deployed successfully to TEST environment"
 
     - name: Notify on failure
       if: failure()
