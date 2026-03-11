@@ -101,6 +101,13 @@ jobs:
       run: |
         echo "✅ Solution ${{ env.SOLUTION_NAME }} v${{ steps.bump_version.outputs.new_version }} deployed successfully to TEST environment"
 
+    - name: Upload solution artifact
+      if: success()
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ env.SOLUTION_NAME }}_${{ steps.bump_version.outputs.new_version }}_managed
+        path: solutions/${{ env.SOLUTION_NAME }}/${{ env.SOLUTION_NAME }}_managed.zip
+
     - name: Notify on failure
       if: failure()
       run: |

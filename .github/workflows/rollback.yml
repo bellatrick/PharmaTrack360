@@ -56,7 +56,7 @@ jobs:
         Write-Host "Found zip: $($zip.FullName)"
         echo "zip_path=$($zip.FullName)" >> $env:GITHUB_OUTPUT
 
-    - name: Import backup solution to ${{ github.event.inputs.environment }}
+    - name: Import backup solution as holding to ${{ github.event.inputs.environment }}
       uses: microsoft/powerplatform-actions/import-solution@v1.0.0
       with:
         environment-url: ${{ github.event.inputs.environment == 'Test' && secrets.TEST_ENVIRONMENT_URL || secrets.DEV_ENVIRONMENT_URL }}
@@ -68,6 +68,18 @@ jobs:
         publish-changes: true
         skip-dependency-check: false
         run-asynchronously: true
+        max-async-wait-time: 60
+        import-as-holding: true
+
+    - name: Upgrade solution in ${{ github.event.inputs.environment }}
+      uses: microsoft/powerplatform-actions/upgrade-solution@v1.0.0
+      with:
+        environment-url: ${{ github.event.inputs.environment == 'Test' && secrets.TEST_ENVIRONMENT_URL || secrets.DEV_ENVIRONMENT_URL }}
+        app-id: ${{ github.event.inputs.environment == 'Test' && secrets.TEST_CLIENT_ID || secrets.DEV_CLIENT_ID }}
+        client-secret: ${{ github.event.inputs.environment == 'Test' && secrets.TEST_CLIENT_SECRET || secrets.DEV_CLIENT_SECRET }}
+        tenant-id: ${{ secrets.TENANT_ID }}
+        solution-name: ${{ github.event.inputs.solution_name }}
+        async: true
         max-async-wait-time: 60
 
     - name: Notify on success
