@@ -33,12 +33,28 @@ jobs:
       uses: microsoft/powerplatform-actions/actions-install@v1.0.0
 
     - name: Download backup artifact
-      uses: dawidd6/action-download-artifact@v6
-      with:
-        github_token: ${{ secrets.PAT_TOKEN }}
-        name: ${{ github.event.inputs.backup_artifact }}
-        path: rollback-artifact
-        search_artifacts: true
+      shell: pwsh
+      env:
+        GH_TOKEN: ${{ secrets.PAT_TOKEN }}
+      run: |
+        $artifactName = "${{ github.event.inputs.backup_artifact }}"
+        Write-Host "Searching for artifact: $artifactName"
+        
+        # Find the artifact and its run ID using GitHub API
+        $artifactsJson = gh api repos/${{ github.repository }}/actions/artifacts --per-page 100
+        $artifacts = $artifactsJson | ConvertFrom-Json
+        $targetArtifact = $artifacts.artifacts | Where-Object { $_.name -eq $artifactName } | Select-Object -First 1
+        
+        if (-not $targetArtifact) {
+          Write-Error "Could not find artifact named '$artifactName' in the last 100 artifacts of the repository."
+          exit 1
+        }
+        
+        $runId = $targetArtifact.workflow_run.id
+        Write-Host "Found artifact in Workflow Run ID: $runId"
+        
+        # Download the artifact from that specific run
+        gh run download $runId --name "$artifactName" --dir rollback-artifact
 
     - name: List downloaded artifact contents
       shell: pwsh
