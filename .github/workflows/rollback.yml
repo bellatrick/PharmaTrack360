@@ -66,15 +66,34 @@ jobs:
       run: |
         $zip = Get-ChildItem -Path "rollback-artifact" -Filter "*.zip" -Recurse | Select-Object -First 1
         if (-not $zip) {
-          Write-Error "No .zip file found in the downloaded artifact. Ensure the artifact contains a solution zip."
+          Write-Error "No .zip file found in the downloaded artifact."
           exit 1
         }
-        Write-Host "Found zip: $($zip.FullName)"
 
-        # Normalize to forward slashes so the action handles it correctly
         $normalizedPath = $zip.FullName -replace '\\', '/'
         Write-Host "Normalized path: $normalizedPath"
         echo "zip_path=$normalizedPath" >> $env:GITHUB_OUTPUT
+
+        # Resolve solution name from zip, fall back to input
+        $solutionName = "${{ github.event.inputs.solution_name }}"
+        try {
+          Add-Type -AssemblyName System.IO.Compression.FileSystem
+          $archive = [System.IO.Compression.ZipFile]::OpenRead($zip.FullName)
+          $entry = $archive.Entries | Where-Object { $_.Name -eq "solution.xml" }
+          if ($entry) {
+            $reader = New-Object System.IO.StreamReader($entry.Open())
+            $content = $reader.ReadToEnd()
+            $reader.Close()
+            if ($content -match '<UniqueName>(.+?)</UniqueName>') {
+              $solutionName = $matches[1]
+              Write-Host "Resolved solution name from zip: $solutionName"
+            }
+          }
+          $archive.Dispose()
+        } catch {
+          Write-Warning "Could not read solution.xml from zip, using input name: $solutionName"
+        }
+        echo "solution_name=$solutionName" >> $env:GITHUB_OUTPUT
 
     - name: Verify solution name inside zip matches input
       shell: pwsh
@@ -126,7 +145,7 @@ jobs:
         app-id: ${{ github.event.inputs.environment == 'Test' && secrets.TEST_CLIENT_ID || secrets.DEV_CLIENT_ID }}
         client-secret: ${{ github.event.inputs.environment == 'Test' && secrets.TEST_CLIENT_SECRET || secrets.DEV_CLIENT_SECRET }}
         tenant-id: ${{ secrets.TENANT_ID }}
-        solution-name: ${{ steps.find_zip.outputs.resolved_solution_name }}  # Uses verified name
+        solution-name: ${{ steps.find_zip.outputs.solution_name }}
         async: true
         max-async-wait-time: 60
 
