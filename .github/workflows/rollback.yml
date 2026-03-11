@@ -17,13 +17,14 @@ on:
       backup_artifact:
         description: 'Backup artifact name (from a previous deployment run)'
         required: true
+      backup_run_id:
+        description: 'GitHub Actions Run ID that created the backup artifact (find in the Actions URL)'
+        required: false
 
 jobs:
   rollback:
     runs-on: windows-latest
     environment: ${{ github.event.inputs.environment }}
-    env:
-      ENV_UPPER: ${{ github.event.inputs.environment == 'Test' && 'TEST' || 'DEV' }}
 
     steps:
     - name: Checkout repository
@@ -32,13 +33,26 @@ jobs:
     - name: Setup Power Platform CLI
       uses: microsoft/powerplatform-actions/actions-install@v1.0.0
 
-    - name: Download backup artifact
+    # --- Option A: download by run_id (preferred — unambiguous) ---
+    - name: Download backup artifact by run ID
+      if: ${{ github.event.inputs.backup_run_id != '' }}
+      uses: dawidd6/action-download-artifact@v6
+      with:
+        github_token: ${{ secrets.PAT_TOKEN }}
+        run_id: ${{ github.event.inputs.backup_run_id }}
+        name: ${{ github.event.inputs.backup_artifact }}
+        path: rollback-artifact
+
+    # --- Option B: search by name across all runs (fallback) ---
+    - name: Download backup artifact by name search
+      if: ${{ github.event.inputs.backup_run_id == '' }}
       uses: dawidd6/action-download-artifact@v6
       with:
         github_token: ${{ secrets.PAT_TOKEN }}
         name: ${{ github.event.inputs.backup_artifact }}
         path: rollback-artifact
         search_artifacts: true
+        # Searches most recent matching artifact across all workflows
 
     - name: List downloaded artifact contents
       shell: pwsh
@@ -50,13 +64,45 @@ jobs:
       id: find_zip
       shell: pwsh
       run: |
-        $zip = Get-ChildItem -Path rollback-artifact -Filter "*.zip" -Recurse | Select-Object -First 1
+        $zip = Get-ChildItem -Path "rollback-artifact" -Filter "*.zip" -Recurse | Select-Object -First 1
         if (-not $zip) {
           Write-Error "No .zip file found in the downloaded artifact. Ensure the artifact contains a solution zip."
           exit 1
         }
         Write-Host "Found zip: $($zip.FullName)"
-        echo "zip_path=$($zip.FullName)" >> $env:GITHUB_OUTPUT
+
+        # Normalize to forward slashes so the action handles it correctly
+        $normalizedPath = $zip.FullName -replace '\\', '/'
+        Write-Host "Normalized path: $normalizedPath"
+        echo "zip_path=$normalizedPath" >> $env:GITHUB_OUTPUT
+
+    - name: Verify solution name inside zip matches input
+      shell: pwsh
+      run: |
+        $zipPath = "${{ steps.find_zip.outputs.zip_path }}"
+        Add-Type -AssemblyName System.IO.Compression.FileSystem
+        $zip = [System.IO.Compression.ZipFile]::OpenRead($zipPath)
+        $solutionEntry = $zip.Entries | Where-Object { $_.Name -eq "solution.xml" }
+        if ($solutionEntry) {
+          $stream = $solutionEntry.Open()
+          $reader = New-Object System.IO.StreamReader($stream)
+          $content = $reader.ReadToEnd()
+          $reader.Close(); $zip.Dispose()
+          if ($content -match '<UniqueName>(.+?)</UniqueName>') {
+            $innerName = $matches[1]
+            Write-Host "Solution unique name inside zip: $innerName"
+            if ($innerName -ne "${{ github.event.inputs.solution_name }}") {
+              Write-Warning "⚠️ Zip solution name '$innerName' differs from input '${{ github.event.inputs.solution_name }}'. Using name from zip."
+              echo "resolved_solution_name=$innerName" >> $env:GITHUB_OUTPUT
+            } else {
+              echo "resolved_solution_name=${{ github.event.inputs.solution_name }}" >> $env:GITHUB_OUTPUT
+            }
+          }
+        } else {
+          $zip.Dispose()
+          Write-Warning "Could not find solution.xml in zip — proceeding with input name."
+          echo "resolved_solution_name=${{ github.event.inputs.solution_name }}" >> $env:GITHUB_OUTPUT
+        }
 
     - name: Import backup solution as holding to ${{ github.event.inputs.environment }}
       uses: microsoft/powerplatform-actions/import-solution@v1.0.0
@@ -67,7 +113,7 @@ jobs:
         tenant-id: ${{ secrets.TENANT_ID }}
         solution-file: ${{ steps.find_zip.outputs.zip_path }}
         force-overwrite: true
-        publish-changes: true
+        publish-changes: false       # Don't publish mid-import; publish after upgrade instead
         skip-dependency-check: false
         run-asynchronously: true
         max-async-wait-time: 60
@@ -80,7 +126,7 @@ jobs:
         app-id: ${{ github.event.inputs.environment == 'Test' && secrets.TEST_CLIENT_ID || secrets.DEV_CLIENT_ID }}
         client-secret: ${{ github.event.inputs.environment == 'Test' && secrets.TEST_CLIENT_SECRET || secrets.DEV_CLIENT_SECRET }}
         tenant-id: ${{ secrets.TENANT_ID }}
-        solution-name: ${{ github.event.inputs.solution_name }}
+        solution-name: ${{ steps.find_zip.outputs.resolved_solution_name }}  # Uses verified name
         async: true
         max-async-wait-time: 60
 
