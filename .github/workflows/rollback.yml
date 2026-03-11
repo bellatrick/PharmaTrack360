@@ -33,12 +33,12 @@ jobs:
       uses: microsoft/powerplatform-actions/actions-install@v1.0.0
 
     - name: Download backup artifact
-      shell: pwsh
-      env:
-        GH_TOKEN: ${{ github.token }}
-      run: |
-        Write-Host "Searching for artifact: ${{ github.event.inputs.backup_artifact }}"
-        gh artifact download --name "${{ github.event.inputs.backup_artifact }}" --dir rollback-artifact
+      uses: dawidd6/action-download-artifact@v6
+      with:
+        github_token: ${{ secrets.PAT_TOKEN }}
+        name: ${{ github.event.inputs.backup_artifact }}
+        path: rollback-artifact
+        search_artifacts: true
 
     - name: List downloaded artifact contents
       shell: pwsh
