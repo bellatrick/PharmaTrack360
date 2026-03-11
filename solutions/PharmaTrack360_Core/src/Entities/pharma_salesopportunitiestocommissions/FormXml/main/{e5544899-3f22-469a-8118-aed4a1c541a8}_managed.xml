@@ -20,22 +20,6 @@
                   </labels>
                   <rows>
                     <row>
-                      <cell id="{1d7d335c-ffae-4ba6-b610-5b6fc167cadb}" showlabel="true" visible="true" labelid="{a2ad42bc-dcb0-4a3e-aaea-f680f2a362c6}">
-                        <labels>
-                          <label description="Sales Rep" languagecode="1033" />
-                        </labels>
-                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_owner" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="pharma_owner" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="false" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{9554143b-648a-4070-8bc1-6300c3cd1334}" showlabel="true" visible="true" labelid="{398ece62-f6e5-4324-a2e9-f3d0c90c014f}">
-                        <labels>
-                          <label description="Account" languagecode="1033" />
-                        </labels>
-                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_account" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="pharma_account" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="true" />
-                      </cell>
-                    </row>
-                    <row>
                       <cell id="{e80618d8-8d10-4d15-93ba-58dbe8e9aac0}" showlabel="true" visible="true" labelid="{ebe263a1-5af4-4d78-a08f-71e3972c35b6}">
                         <labels>
                           <label description="Estimated value" languagecode="1033" />
@@ -73,14 +57,14 @@
             </column>
           </columns>
         </tab>
-        <tab verticallayout="true" id="{3cb20efe-962d-4ea0-84a4-3fccf19b7a86}" name="StageStep17" locklevel="0" expanded="true" visible="false" labelid="{e7eb9d26-8b7c-48b9-87fc-bc776c651af0}">
+        <tab verticallayout="true" id="{3cb20efe-962d-4ea0-84a4-3fccf19b7a86}" name="StageStep13" locklevel="0" expanded="true" visible="false" labelid="{e7eb9d26-8b7c-48b9-87fc-bc776c651af0}">
           <labels>
             <label description="Quote" languagecode="1033" />
           </labels>
           <columns>
             <column width="100%">
               <sections>
-                <section showbar="false" columns="1" id="{f6d41e43-6aee-4e94-e092-530fdefb6dd0}" name="StageStep17_section1" labelid="{c5a7386e-8717-4dc8-87fe-5226f4c384ae}">
+                <section showbar="false" columns="1" id="{f6d41e43-6aee-4e94-e092-530fdefb6dd0}" name="StageStep13_section1" labelid="{32709193-3dfc-4fc3-8da9-662cf1c9766d}">
                   <labels>
                     <label description="Quote" languagecode="1033" />
                   </labels>
@@ -115,14 +99,14 @@
             </column>
           </columns>
         </tab>
-        <tab verticallayout="true" id="{04c079a6-f123-4a70-8147-c3a5d3e28fd9}" name="StageStep25" locklevel="0" expanded="true" visible="false" labelid="{cb60115b-a3f7-4dea-a694-edb04549b41b}">
+        <tab verticallayout="true" id="{04c079a6-f123-4a70-8147-c3a5d3e28fd9}" name="StageStep21" locklevel="0" expanded="true" visible="false" labelid="{cb60115b-a3f7-4dea-a694-edb04549b41b}">
           <labels>
             <label description="Negotiation" languagecode="1033" />
           </labels>
           <columns>
             <column width="100%">
               <sections>
-                <section showbar="false" columns="1" id="{0caa95b5-37e7-46ab-4b38-5ea8b367a596}" name="StageStep25_section1" labelid="{792fb9da-4f89-4b49-bd17-4357d2f7e45a}">
+                <section showbar="false" columns="1" id="{0caa95b5-37e7-46ab-4b38-5ea8b367a596}" name="StageStep21_section1" labelid="{64e5662d-ab33-498a-b893-c4ae8036df52}">
                   <labels>
                     <label description="Negotiation" languagecode="1033" />
                   </labels>
@@ -133,14 +117,6 @@
                           <label description="Negotiation amount" languagecode="1033" />
                         </labels>
                         <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_negotiationamount" classid="{533b9e00-756b-4312-95a0-dc888637ac78}" datafieldname="pharma_negotiationamount" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="false" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{a80a4fd7-cb7c-4cef-96df-de53b1116acd}" showlabel="true" visible="true" labelid="{7ab2011a-4e82-4fb0-830a-aacf8f5b046c}">
-                        <labels>
-                          <label description="Approval required" languagecode="1033" />
-                        </labels>
-                        <control id="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions:pharma_approvalrequired" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="pharma_approvalrequired" disabled="false" relationship="bpf_pharma_opportunity_pharma_salesopportunitiestocommissions" isrequired="false" />
                       </cell>
                     </row>
                     <row>
@@ -165,14 +141,14 @@
             </column>
           </columns>
         </tab>
-        <tab verticallayout="true" id="{e214f0c6-9aac-4752-9666-47047dc0ed64}" name="StageStep35" locklevel="0" expanded="true" visible="false" labelid="{f41ff0b8-e8c5-4e42-87d2-5bc704a78891}">
+        <tab verticallayout="true" id="{e214f0c6-9aac-4752-9666-47047dc0ed64}" name="StageStep29" locklevel="0" expanded="true" visible="false" labelid="{f41ff0b8-e8c5-4e42-87d2-5bc704a78891}">
           <labels>
             <label description="Closed" languagecode="1033" />
           </labels>
           <columns>
             <column width="100%">
               <sections>
-                <section showbar="false" columns="1" id="{c8f7bcde-f0b8-bd2a-87a4-8bcd85b03390}" name="StageStep35_section1" labelid="{44c1bbdf-8bd5-4f55-9de0-8317d6b215b8}">
+                <section showbar="false" columns="1" id="{c8f7bcde-f0b8-bd2a-87a4-8bcd85b03390}" name="StageStep29_section1" labelid="{c3c44b29-ad16-4b5e-90a9-e503be52c438}">
                   <labels>
                     <label description="Closed" languagecode="1033" />
                   </labels>
@@ -215,14 +191,14 @@
             </column>
           </columns>
         </tab>
-        <tab verticallayout="true" id="{000ba1b4-b847-49da-8bd9-cadd01932ebf}" name="StageStep45" locklevel="0" expanded="true" visible="false" labelid="{61f3f9d0-9607-47ad-a280-66cc5f84c0ff}">
+        <tab verticallayout="true" id="{000ba1b4-b847-49da-8bd9-cadd01932ebf}" name="StageStep39" locklevel="0" expanded="true" visible="false" labelid="{61f3f9d0-9607-47ad-a280-66cc5f84c0ff}">
           <labels>
             <label description="Closed Lost" languagecode="1033" />
           </labels>
           <columns>
             <column width="100%">
               <sections>
-                <section showbar="false" columns="1" id="{fddecf2c-3e53-933c-0fa6-eebdbd0e3c2b}" name="StageStep45_section1" labelid="{dcc16be0-e2a1-49ef-84c7-23dd933c732b}">
+                <section showbar="false" columns="1" id="{fddecf2c-3e53-933c-0fa6-eebdbd0e3c2b}" name="StageStep39_section1" labelid="{beb9db17-473a-4eb5-bcbb-d8fac62bdc4d}">
                   <labels>
                     <label description="Closed Lost" languagecode="1033" />
                   </labels>

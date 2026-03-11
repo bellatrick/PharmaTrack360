@@ -76,14 +76,6 @@
                       </cell>
                     </row>
                     <row>
-                      <cell id="{cb4f50f0-af21-4ad6-a853-556cedaadc26}">
-                        <labels>
-                          <label description="" languagecode="1033" />
-                        </labels>
-                        <control id="pharma_probability" classid="{c6d124ca-7eda-4a60-aea9-7fb8d318b68f}" datafieldname="pharma_probability" />
-                      </cell>
-                    </row>
-                    <row>
                       <cell id="{6ddd74c3-51a2-493c-a668-c95aeeaefff7}" visible="false">
                         <labels>
                           <label description="" languagecode="1033" />
@@ -105,6 +97,38 @@
                           <label description="" languagecode="1033" />
                         </labels>
                         <control id="pharma_reasonlost" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="pharma_reasonlost" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{afb64706-a6de-46ea-ae69-8d9da2157101}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_approvalrequired" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="pharma_approvalrequired" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3c56c2c5-aa11-4604-a2e8-4ca839fb1b6e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_commissionamount" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="pharma_commissionamount" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d6bae28d-7b16-4f0a-9588-95b28c5b362a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_commissionrate" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="pharma_commissionrate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3a5a0ba9-12d9-40f7-9578-8a662e969833}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="pharma_actualsaleamount" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="pharma_actualsaleamount" disabled="false" />
                       </cell>
                     </row>
                   </rows>

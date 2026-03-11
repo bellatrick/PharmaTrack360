@@ -20,6 +20,7 @@
           <cell name="pharma_products" width="150" />
           <cell name="pharma_source" width="150" />
           <cell name="pharma_reasonlost" width="150" />
+          <cell name="createdon" width="105" />
         </row>
       </grid>
     </layoutxml>
@@ -30,7 +31,6 @@
           <attribute name="pharma_opportunityid" />
           <attribute name="pharma_opportunityname" />
           <attribute name="createdon" />
-          <order attribute="pharma_opportunityname" descending="false" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
@@ -43,6 +43,8 @@
           <attribute name="pharma_products" />
           <attribute name="pharma_source" />
           <attribute name="pharma_reasonlost" />
+          <attribute name="createdon" />
+          <order attribute="createdon" descending="true" />
         </entity>
       </fetch>
     </fetchxml>

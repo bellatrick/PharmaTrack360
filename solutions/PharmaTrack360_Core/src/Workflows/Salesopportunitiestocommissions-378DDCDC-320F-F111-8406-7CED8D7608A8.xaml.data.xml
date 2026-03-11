@@ -31,12 +31,6 @@
     <steplabels id="{08bae153-c60d-47bc-9276-0245ce905fb5}">
       <label languagecode="1033" description="Lead Qualification" />
     </steplabels>
-    <steplabels id="{1d7d335c-ffae-4ba6-b610-5b6fc167cadb}">
-      <label languagecode="1033" description="Sales Rep" />
-    </steplabels>
-    <steplabels id="{9554143b-648a-4070-8bc1-6300c3cd1334}">
-      <label languagecode="1033" description="Account" />
-    </steplabels>
     <steplabels id="{e80618d8-8d10-4d15-93ba-58dbe8e9aac0}">
       <label languagecode="1033" description="Estimated value" />
     </steplabels>
@@ -66,9 +60,6 @@
     </steplabels>
     <steplabels id="{ea37cdce-05d0-4479-8b8d-b05b5a4d3354}">
       <label languagecode="1033" description="Negotiation amount" />
-    </steplabels>
-    <steplabels id="{a80a4fd7-cb7c-4cef-96df-de53b1116acd}">
-      <label languagecode="1033" description="Approval required" />
     </steplabels>
     <steplabels id="{10c55ef5-3080-4762-b48a-2e779307c6e3}">
       <label languagecode="1033" description="Discount applied" />
