@@ -123,6 +123,16 @@ jobs:
           echo "resolved_solution_name=${{ github.event.inputs.solution_name }}" >> $env:GITHUB_OUTPUT
         }
 
+    - name: Delete stale holding solution (if exists)
+      continue-on-error: true
+      uses: microsoft/powerplatform-actions/delete-solution@v1.0.0
+      with:
+        environment-url: ${{ github.event.inputs.environment == 'Test' && secrets.TEST_ENVIRONMENT_URL || secrets.DEV_ENVIRONMENT_URL }}
+        app-id: ${{ github.event.inputs.environment == 'Test' && secrets.TEST_CLIENT_ID || secrets.DEV_CLIENT_ID }}
+        client-secret: ${{ github.event.inputs.environment == 'Test' && secrets.TEST_CLIENT_SECRET || secrets.DEV_CLIENT_SECRET }}
+        tenant-id: ${{ secrets.TENANT_ID }}
+        solution-name: ${{ github.event.inputs.solution_name }}_Upgrade
+
     - name: Import backup solution as holding to ${{ github.event.inputs.environment }}
       uses: microsoft/powerplatform-actions/import-solution@v1.0.0
       with:
