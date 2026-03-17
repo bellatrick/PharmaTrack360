@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.26022.162" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26022.162" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26022.00162">
+<ImportExportXml version="9.2.26023.173" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26023.173" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26023.00173">
   <SolutionManifest>
     <UniqueName>PharmaTrack360_Core</UniqueName>
     <LocalizedNames>
@@ -328,8 +328,8 @@
         <Dependent type="80" schemaName="pharma_PharmaTrack" displayName="PharmaTrack" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2602.2012)">
-          <package appName="Base Custom Controls" version="9.0.2602.2012">BaseCustomControlsCore (9.0.2602.2012)</package>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2602.3008)">
+          <package appName="Base Custom Controls" version="9.0.2602.3008">BaseCustomControlsCore (9.0.2602.3008)</package>
         </Required>
         <Dependent type="26" schemaName="Active PurchaseOrders" displayName="Active PurchaseOrders" parentSchemaName="pharma_purchaseorder" parentDisplayName="PurchaseOrder" id="{1e47f310-3df2-4189-987b-223cd1c2ead1}" />
       </MissingDependency>
