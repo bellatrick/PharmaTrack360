@@ -37,7 +37,10 @@ jobs:
         [xml]$xml = Get-Content $xmlPath -Encoding UTF8
         $current = $xml.ImportExportXml.SolutionManifest.Version
         $parts = $current -split '\.'
-        $parts[3] = [int]$parts[3] + 1
+        # Use run_number for build segment to guarantee version always increases
+        # regardless of what version was exported from DEV
+        $parts[2] = "${{ github.run_number }}"
+        $parts[3] = "0"
         $newVersion = $parts -join '.'
         $xml.ImportExportXml.SolutionManifest.Version = $newVersion
         $xml.Save((Resolve-Path $xmlPath))
