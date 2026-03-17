@@ -141,11 +141,13 @@ jobs:
           exit 1
         }
 
-        # Read and bump the version (increment last segment)
+        # Use run_number for build segment to guarantee version always exceeds
+        # whatever version is currently in TEST (same strategy as deploy-to-test)
         [xml]$xml = Get-Content $solutionXml.FullName -Encoding UTF8
         $current = $xml.ImportExportXml.SolutionManifest.Version
         $parts = $current -split '\.'
-        $parts[3] = [int]$parts[3] + 1
+        $parts[2] = "${{ github.run_number }}"
+        $parts[3] = "0"
         $newVersion = $parts -join '.'
         $xml.ImportExportXml.SolutionManifest.Version = $newVersion
         $xml.Save($solutionXml.FullName)
