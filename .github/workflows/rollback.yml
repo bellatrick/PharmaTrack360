@@ -122,6 +122,41 @@ jobs:
           Write-Warning "Could not find solution.xml in zip — proceeding with input name."
           echo "resolved_solution_name=${{ github.event.inputs.solution_name }}" >> $env:GITHUB_OUTPUT
         }
+    - name: Bump version in rollback zip
+      id: bump_version
+      shell: pwsh
+      run: |
+        $zipPath = "${{ steps.find_zip.outputs.zip_path }}"
+        Add-Type -AssemblyName System.IO.Compression.FileSystem
+
+        # Extract zip to a temp folder
+        $tempDir = "rollback-unpacked"
+        if (Test-Path $tempDir) { Remove-Item $tempDir -Recurse -Force }
+        [System.IO.Compression.ZipFile]::ExtractToDirectory($zipPath, $tempDir)
+
+        # Find solution.xml
+        $solutionXml = Get-ChildItem -Path $tempDir -Filter "solution.xml" -Recurse | Select-Object -First 1
+        if (-not $solutionXml) {
+          Write-Error "solution.xml not found in zip."
+          exit 1
+        }
+
+        # Read and bump the version (increment last segment)
+        [xml]$xml = Get-Content $solutionXml.FullName -Encoding UTF8
+        $current = $xml.ImportExportXml.SolutionManifest.Version
+        $parts = $current -split '\.'
+        $parts[3] = [int]$parts[3] + 1
+        $newVersion = $parts -join '.'
+        $xml.ImportExportXml.SolutionManifest.Version = $newVersion
+        $xml.Save($solutionXml.FullName)
+        Write-Host "Version bumped: $current → $newVersion"
+        echo "new_version=$newVersion" >> $env:GITHUB_OUTPUT
+
+        # Repack zip in-place
+        Remove-Item $zipPath -Force
+        [System.IO.Compression.ZipFile]::CreateFromDirectory($tempDir, $zipPath)
+        Remove-Item $tempDir -Recurse -Force
+        Write-Host "Repacked zip: $zipPath"
 
     - name: Delete stale holding solution (if exists)
       continue-on-error: true
@@ -162,7 +197,7 @@ jobs:
     - name: Notify on success
       if: success()
       run: |
-        echo "✅ Rollback of ${{ github.event.inputs.solution_name }} to artifact '${{ github.event.inputs.backup_artifact }}' succeeded in ${{ github.event.inputs.environment }}"
+        echo "✅ Rollback of ${{ github.event.inputs.solution_name }} v${{ steps.bump_version.outputs.new_version }} (from artifact '${{ github.event.inputs.backup_artifact }}') succeeded in ${{ github.event.inputs.environment }}"
 
     - name: Notify on failure
       if: failure()
